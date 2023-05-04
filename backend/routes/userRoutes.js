@@ -1,6 +1,6 @@
 import { addNewUser, getUsers, getUserById, updateUser, deleteUser } from "../controllers/userController";
 
-const routes = (app) => {
+const userRoutes = (app) => {
   app.route('/users')
     .get(getUsers)
     .post(addNewUser);
@@ -11,4 +11,4 @@ const routes = (app) => {
     .delete(deleteUser);
 }
 
-export default routes;
+export default userRoutes;
