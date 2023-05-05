@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
 import { ErrorComponent } from './error/error.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { ResultsComponent } from './results/results.component';
+import { ScoresComponent } from './scores/scores.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'first', pathMatch: 'full'},
-  {path: 'first', component: FirstComponent},
-  {path: 'second/:id', component: SecondComponent},
+  {path: '', redirectTo: 'quizzes', pathMatch: 'full'},
+  {path: 'quizzes', component: QuizzesComponent},
+  {path: 'quiz/:id', component: QuizComponent},
+  {path: 'results', component: ResultsComponent},
+  {path: 'scores', component: ScoresComponent},
   {path: '**', component: ErrorComponent}
 ];
 
