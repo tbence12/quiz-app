@@ -3,6 +3,7 @@ import categoryRoutes from './categoryRoutes';
 import questionRoutes from './questionRoutes';
 import quizRoutes from './quizRoutes';
 import resultRoutes from './resultRoutes';
+import authRoutes from './authRoutes';
 
 const routes = (app) => {
   userRoutes(app);
@@ -10,6 +11,7 @@ const routes = (app) => {
   questionRoutes(app);
   quizRoutes(app);
   resultRoutes(app);
+  authRoutes(app);
 }
 
 export default routes;

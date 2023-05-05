@@ -1,33 +1,22 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import routes from './routes';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import database from './database';
+import authentication from './authentication';
 
-dotenv.config();
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-});
-
-mongoose.connection.on('connected', () => {
-  console.log('MongoDB connected')
-})
-
-mongoose.connection.on('error', (error) => {
-  console.log('Error happened: ', error)
-})
+database();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(cors());
+
+authentication(app);
 
 routes(app);
 
