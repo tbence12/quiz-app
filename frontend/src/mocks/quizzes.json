@@ -1,0 +1,13 @@
+[
+  {
+      "_id": "6453e57a822f1e8898fb260f",
+      "name": "Test Quiz",
+      "questionIds": [
+          "645362d2df8bcfede29dac93",
+          "6453d5d6e4656a8f824f986b"
+      ],
+      "createdAt": "2023-05-04T17:03:54.551Z",
+      "updatedAt": "2023-05-04T17:03:54.551Z",
+      "__v": 0
+  }
+]

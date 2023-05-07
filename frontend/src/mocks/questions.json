@@ -1,0 +1,1297 @@
+[
+  {
+      "_id": "645362d2df8bcfede29dac93",
+      "text": "Melyik évben kezdődött a második világháború?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "1939",
+              "correct": true,
+              "_id": "6453d577e4656a8f824f9858"
+          },
+          {
+              "number": 2,
+              "text": "1940",
+              "correct": false,
+              "_id": "6453d577e4656a8f824f9859"
+          },
+          {
+              "number": 3,
+              "text": "1941",
+              "correct": false,
+              "_id": "6453d577e4656a8f824f985a"
+          },
+          {
+              "number": 4,
+              "text": "1942",
+              "correct": false,
+              "_id": "6453d577e4656a8f824f985b"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T07:46:26.462Z",
+      "updatedAt": "2023-05-04T15:55:35.425Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d5d6e4656a8f824f986b",
+      "text": "Ki volt az első amerikai elnök?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "George Washington",
+              "correct": true,
+              "_id": "6453d5d6e4656a8f824f986c"
+          },
+          {
+              "number": 2,
+              "text": "Abraham Lincoln",
+              "correct": false,
+              "_id": "6453d5d6e4656a8f824f986d"
+          },
+          {
+              "number": 3,
+              "text": "Thomas Jefferson",
+              "correct": false,
+              "_id": "6453d5d6e4656a8f824f986e"
+          },
+          {
+              "number": 4,
+              "text": "Franklin D. Roosevelt",
+              "correct": false,
+              "_id": "6453d5d6e4656a8f824f986f"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T15:57:10.751Z",
+      "updatedAt": "2023-05-04T15:57:10.751Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d5fae4656a8f824f987a",
+      "text": "Melyik évben született Adolf Hitler?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "1889",
+              "correct": true,
+              "_id": "6453d5fae4656a8f824f987b"
+          },
+          {
+              "number": 2,
+              "text": "1901",
+              "correct": false,
+              "_id": "6453d5fae4656a8f824f987c"
+          },
+          {
+              "number": 3,
+              "text": "1915",
+              "correct": false,
+              "_id": "6453d5fae4656a8f824f987d"
+          },
+          {
+              "number": 4,
+              "text": "1933",
+              "correct": false,
+              "_id": "6453d5fae4656a8f824f987e"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T15:57:46.041Z",
+      "updatedAt": "2023-05-04T15:57:46.041Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d60ce4656a8f824f9880",
+      "text": "Melyik ország volt az első, amelyik elismeri a nők választójogát?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Új-Zéland",
+              "correct": true,
+              "_id": "6453d60ce4656a8f824f9881"
+          },
+          {
+              "number": 2,
+              "text": "Ausztrália",
+              "correct": false,
+              "_id": "6453d60ce4656a8f824f9882"
+          },
+          {
+              "number": 3,
+              "text": "Egyesült Királyság",
+              "correct": false,
+              "_id": "6453d60ce4656a8f824f9883"
+          },
+          {
+              "number": 4,
+              "text": "Amerikai Egyesült Államok",
+              "correct": false,
+              "_id": "6453d60ce4656a8f824f9884"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T15:58:04.487Z",
+      "updatedAt": "2023-05-04T15:58:04.487Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d624e4656a8f824f9886",
+      "text": "Mikor érte el a brit birodalom területi kiterjedése a legnagyobb értéket?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "1922",
+              "correct": false,
+              "_id": "6453d624e4656a8f824f9887"
+          },
+          {
+              "number": 2,
+              "text": "1918",
+              "correct": false,
+              "_id": "6453d624e4656a8f824f9888"
+          },
+          {
+              "number": 3,
+              "text": "1899",
+              "correct": false,
+              "_id": "6453d624e4656a8f824f9889"
+          },
+          {
+              "number": 4,
+              "text": "1920",
+              "correct": true,
+              "_id": "6453d624e4656a8f824f988a"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T15:58:28.498Z",
+      "updatedAt": "2023-05-04T15:58:28.498Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d6bae4656a8f824f98a1",
+      "text": "Melyik évben végződött a második világháború Európában?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "1944",
+              "correct": false,
+              "_id": "6453d6bae4656a8f824f98a2"
+          },
+          {
+              "number": 2,
+              "text": "1945",
+              "correct": true,
+              "_id": "6453d6bae4656a8f824f98a3"
+          },
+          {
+              "number": 3,
+              "text": "1946",
+              "correct": false,
+              "_id": "6453d6bae4656a8f824f98a4"
+          },
+          {
+              "number": 4,
+              "text": "1947",
+              "correct": false,
+              "_id": "6453d6bae4656a8f824f98a5"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T16:00:58.828Z",
+      "updatedAt": "2023-05-04T16:00:58.828Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d6dce4656a8f824f98a7",
+      "text": "Milyen esemény vezetett a világ gazdasági válságához az 1920-as években?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Az Osztrák-Magyar Monarchia összeomlása",
+              "correct": false,
+              "_id": "6453d6dce4656a8f824f98a8"
+          },
+          {
+              "number": 2,
+              "text": "Az első világháború",
+              "correct": false,
+              "_id": "6453d6dce4656a8f824f98a9"
+          },
+          {
+              "number": 3,
+              "text": "A második világháború",
+              "correct": false,
+              "_id": "6453d6dce4656a8f824f98aa"
+          },
+          {
+              "number": 4,
+              "text": "A New York-i tőzsde összeomlása",
+              "correct": true,
+              "_id": "6453d6dce4656a8f824f98ab"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T16:01:32.811Z",
+      "updatedAt": "2023-05-04T16:01:32.811Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d6f0e4656a8f824f98ad",
+      "text": "Ki volt a második világháború idején Németország vezetője?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Adolf Hitler",
+              "correct": true,
+              "_id": "6453d6f0e4656a8f824f98ae"
+          },
+          {
+              "number": 2,
+              "text": "Joseph Stalin",
+              "correct": false,
+              "_id": "6453d6f0e4656a8f824f98af"
+          },
+          {
+              "number": 3,
+              "text": "Winston Churchill",
+              "correct": false,
+              "_id": "6453d6f0e4656a8f824f98b0"
+          },
+          {
+              "number": 4,
+              "text": "Franklin D. Roosevelt",
+              "correct": false,
+              "_id": "6453d6f0e4656a8f824f98b1"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T16:01:52.044Z",
+      "updatedAt": "2023-05-04T16:01:52.044Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d73ae4656a8f824f98b3",
+      "text": "Mikor és hol kerültek megrendezésre az első modern olimpiai játékok?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Athénban, 1896-ban",
+              "correct": true,
+              "_id": "6453d73ae4656a8f824f98b4"
+          },
+          {
+              "number": 2,
+              "text": "Londonban, 1908-ban",
+              "correct": false,
+              "_id": "6453d73ae4656a8f824f98b5"
+          },
+          {
+              "number": 3,
+              "text": "Párizsban, 1924-ben",
+              "correct": false,
+              "_id": "6453d73ae4656a8f824f98b6"
+          },
+          {
+              "number": 4,
+              "text": "Los Angelesben, 1932-ben",
+              "correct": false,
+              "_id": "6453d73ae4656a8f824f98b7"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T16:03:06.077Z",
+      "updatedAt": "2023-05-04T16:03:06.077Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d7b4e4656a8f824f98b9",
+      "text": "Melyik volt az első nagyobb összecsapás a második világháborúban a keleti fronton?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Dunai áttörés",
+              "correct": false,
+              "_id": "6453d7b4e4656a8f824f98ba"
+          },
+          {
+              "number": 2,
+              "text": "Moszkvai csata",
+              "correct": true,
+              "_id": "6453d7b4e4656a8f824f98bb"
+          },
+          {
+              "number": 3,
+              "text": "Sztálingrádi csata",
+              "correct": false,
+              "_id": "6453d7b4e4656a8f824f98bc"
+          },
+          {
+              "number": 4,
+              "text": "Kurszki csata",
+              "correct": false,
+              "_id": "6453d7b4e4656a8f824f98bd"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T16:05:08.406Z",
+      "updatedAt": "2023-05-04T16:05:08.406Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d853e4656a8f824f98bf",
+      "text": "Melyik évben robbant ki az első világháború?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "1914",
+              "correct": true,
+              "_id": "6453d853e4656a8f824f98c0"
+          },
+          {
+              "number": 2,
+              "text": "1917",
+              "correct": false,
+              "_id": "6453d853e4656a8f824f98c1"
+          },
+          {
+              "number": 3,
+              "text": "1918",
+              "correct": false,
+              "_id": "6453d853e4656a8f824f98c2"
+          },
+          {
+              "number": 4,
+              "text": "1920",
+              "correct": false,
+              "_id": "6453d853e4656a8f824f98c3"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T16:07:47.720Z",
+      "updatedAt": "2023-05-04T16:07:47.720Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d870e4656a8f824f98c5",
+      "text": "Melyik évben történt meg a berlini fal lebontása?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "1987",
+              "correct": false,
+              "_id": "6453d870e4656a8f824f98c6"
+          },
+          {
+              "number": 2,
+              "text": "1989",
+              "correct": true,
+              "_id": "6453d870e4656a8f824f98c7"
+          },
+          {
+              "number": 3,
+              "text": "1991",
+              "correct": false,
+              "_id": "6453d870e4656a8f824f98c8"
+          },
+          {
+              "number": 4,
+              "text": "1993",
+              "correct": false,
+              "_id": "6453d870e4656a8f824f98c9"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149cb6ad6c72469794ba5"
+      ],
+      "createdAt": "2023-05-04T16:08:16.195Z",
+      "updatedAt": "2023-05-04T16:08:16.195Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d961e4656a8f824f98ce",
+      "text": "Ki írta a 'Háború és béke' című regényt?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Lev Tolsztoj",
+              "correct": true,
+              "_id": "6453d961e4656a8f824f98cf"
+          },
+          {
+              "number": 2,
+              "text": "Fjodor Dosztojevszkij",
+              "correct": false,
+              "_id": "6453d961e4656a8f824f98d0"
+          },
+          {
+              "number": 3,
+              "text": "Anton Pavlovics Csehov",
+              "correct": false,
+              "_id": "6453d961e4656a8f824f98d1"
+          },
+          {
+              "number": 4,
+              "text": "Ivan Sztanyevics Turgenyev",
+              "correct": false,
+              "_id": "6453d961e4656a8f824f98d2"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:12:17.297Z",
+      "updatedAt": "2023-05-04T16:12:17.297Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d97be4656a8f824f98d4",
+      "text": "Kinek a költeménye a 'Tavasz és őszi dal'?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Petőfi Sándor",
+              "correct": false,
+              "_id": "6453d97be4656a8f824f98d5"
+          },
+          {
+              "number": 2,
+              "text": "Ady Endre",
+              "correct": false,
+              "_id": "6453d97be4656a8f824f98d6"
+          },
+          {
+              "number": 3,
+              "text": "Babits Mihály",
+              "correct": false,
+              "_id": "6453d97be4656a8f824f98d7"
+          },
+          {
+              "number": 4,
+              "text": "József Attila",
+              "correct": true,
+              "_id": "6453d97be4656a8f824f98d8"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:12:43.933Z",
+      "updatedAt": "2023-05-04T16:12:43.933Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d996e4656a8f824f98da",
+      "text": "Ki írta a 'Macskák' című musicalt?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Andrew Lloyd Webber",
+              "correct": true,
+              "_id": "6453d996e4656a8f824f98db"
+          },
+          {
+              "number": 2,
+              "text": "Stephen Sondheim",
+              "correct": false,
+              "_id": "6453d996e4656a8f824f98dc"
+          },
+          {
+              "number": 3,
+              "text": "Richard Rodgers",
+              "correct": false,
+              "_id": "6453d996e4656a8f824f98dd"
+          },
+          {
+              "number": 4,
+              "text": "Lionel Bart",
+              "correct": false,
+              "_id": "6453d996e4656a8f824f98de"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:13:10.548Z",
+      "updatedAt": "2023-05-04T16:13:10.548Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453d9bee4656a8f824f98e0",
+      "text": "Melyik regényből származik a 'Nem vagyunk tökéletesek, de ha szeretünk valakit, az már több annál' idézet?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Stoner",
+              "correct": false,
+              "_id": "6453d9bee4656a8f824f98e1"
+          },
+          {
+              "number": 2,
+              "text": "Az öreg halász és a tenger",
+              "correct": false,
+              "_id": "6453d9bee4656a8f824f98e2"
+          },
+          {
+              "number": 3,
+              "text": "Az idők végezetéig",
+              "correct": false,
+              "_id": "6453d9bee4656a8f824f98e3"
+          },
+          {
+              "number": 4,
+              "text": "Az alkimista",
+              "correct": true,
+              "_id": "6453d9bee4656a8f824f98e4"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:13:50.134Z",
+      "updatedAt": "2023-05-04T16:13:50.134Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453da7be4656a8f824f98e6",
+      "text": "Melyik Jókai regény főszereplőjének a neve Gábor?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Az arany ember",
+              "correct": false,
+              "_id": "6453da7be4656a8f824f98e7"
+          },
+          {
+              "number": 2,
+              "text": "Egy magyar nábob",
+              "correct": false,
+              "_id": "6453da7be4656a8f824f98e8"
+          },
+          {
+              "number": 3,
+              "text": "Az erdő kapitánya",
+              "correct": false,
+              "_id": "6453da7be4656a8f824f98e9"
+          },
+          {
+              "number": 4,
+              "text": "Fekete gyémántok",
+              "correct": true,
+              "_id": "6453da7be4656a8f824f98ea"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:16:59.669Z",
+      "updatedAt": "2023-05-04T16:16:59.669Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453da93e4656a8f824f98ec",
+      "text": "Ki írta a 'Pál utcai fiúk' című regényt?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Jókai Mór",
+              "correct": false,
+              "_id": "6453da93e4656a8f824f98ed"
+          },
+          {
+              "number": 2,
+              "text": "Móra Ferenc",
+              "correct": false,
+              "_id": "6453da94e4656a8f824f98ee"
+          },
+          {
+              "number": 3,
+              "text": "Móricz Zsigmond",
+              "correct": false,
+              "_id": "6453da94e4656a8f824f98ef"
+          },
+          {
+              "number": 4,
+              "text": "Molnár Ferenc",
+              "correct": true,
+              "_id": "6453da94e4656a8f824f98f0"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:17:24.001Z",
+      "updatedAt": "2023-05-04T16:17:24.001Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453dac6e4656a8f824f98f8",
+      "text": "Ki írta a 'Nyugat lángjai' című regényt?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Márai Sándor",
+              "correct": true,
+              "_id": "6453dac6e4656a8f824f98f9"
+          },
+          {
+              "number": 2,
+              "text": "Molnár Ferenc",
+              "correct": false,
+              "_id": "6453dac6e4656a8f824f98fa"
+          },
+          {
+              "number": 3,
+              "text": "Kosztolányi Dezső",
+              "correct": false,
+              "_id": "6453dac6e4656a8f824f98fb"
+          },
+          {
+              "number": 4,
+              "text": "Babits Mihály",
+              "correct": false,
+              "_id": "6453dac6e4656a8f824f98fc"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:18:14.235Z",
+      "updatedAt": "2023-05-04T16:18:14.235Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453db07e4656a8f824f98fe",
+      "text": "Ki írta a Bűn és bűnhődés című regényt?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Lev Tolsztoj",
+              "correct": false,
+              "_id": "6453db07e4656a8f824f98ff"
+          },
+          {
+              "number": 2,
+              "text": "Fjodor Mihajlovics Dosztojevszkij",
+              "correct": true,
+              "_id": "6453db07e4656a8f824f9900"
+          },
+          {
+              "number": 3,
+              "text": "Ivan Sztanyiszlavovics Turgenyev",
+              "correct": false,
+              "_id": "6453db07e4656a8f824f9901"
+          },
+          {
+              "number": 4,
+              "text": "Makszim Gorkij",
+              "correct": false,
+              "_id": "6453db07e4656a8f824f9902"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:19:19.036Z",
+      "updatedAt": "2023-05-04T16:19:19.036Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453db1ee4656a8f824f9904",
+      "text": "Melyik Shakespeare műben szerepel Hamlet?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Rómeó és Júlia",
+              "correct": false,
+              "_id": "6453db1ee4656a8f824f9905"
+          },
+          {
+              "number": 2,
+              "text": "Othello",
+              "correct": false,
+              "_id": "6453db1ee4656a8f824f9906"
+          },
+          {
+              "number": 3,
+              "text": "Sok hűhó semmiért",
+              "correct": false,
+              "_id": "6453db1ee4656a8f824f9907"
+          },
+          {
+              "number": 4,
+              "text": "Hamlet",
+              "correct": true,
+              "_id": "6453db1ee4656a8f824f9908"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:19:42.461Z",
+      "updatedAt": "2023-05-04T16:19:42.461Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453db37e4656a8f824f990a",
+      "text": "Melyik író kapta az irodalmi Nobel-díjat 2019-ben?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Kazuo Ishiguro",
+              "correct": false,
+              "_id": "6453db37e4656a8f824f990b"
+          },
+          {
+              "number": 2,
+              "text": "Patrick Modiano",
+              "correct": false,
+              "_id": "6453db37e4656a8f824f990c"
+          },
+          {
+              "number": 3,
+              "text": "Olga Tokarczuk",
+              "correct": true,
+              "_id": "6453db37e4656a8f824f990d"
+          },
+          {
+              "number": 4,
+              "text": "Alice Munro",
+              "correct": false,
+              "_id": "6453db37e4656a8f824f990e"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:20:07.402Z",
+      "updatedAt": "2023-05-04T16:20:07.402Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453db53e4656a8f824f9910",
+      "text": "Melyik Jókai Mór regény cselekménye játszódik az 1848-49-es forradalom és szabadságharc idején?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Az arany ember",
+              "correct": false,
+              "_id": "6453db53e4656a8f824f9911"
+          },
+          {
+              "number": 2,
+              "text": "Az élet ára",
+              "correct": false,
+              "_id": "6453db53e4656a8f824f9912"
+          },
+          {
+              "number": 3,
+              "text": "A tengerszem fehére",
+              "correct": false,
+              "_id": "6453db53e4656a8f824f9913"
+          },
+          {
+              "number": 4,
+              "text": "Az utolsó hajnal",
+              "correct": true,
+              "_id": "6453db53e4656a8f824f9914"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "645344a229eb027f9d1b0147"
+      ],
+      "createdAt": "2023-05-04T16:20:35.982Z",
+      "updatedAt": "2023-05-04T16:20:35.982Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453de33e4656a8f824f9916",
+      "text": "Melyik sportágban használják a shuttlecockot?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "röplabda",
+              "correct": false,
+              "_id": "6453de33e4656a8f824f9917"
+          },
+          {
+              "number": 2,
+              "text": "asztalitenisz",
+              "correct": false,
+              "_id": "6453de33e4656a8f824f9918"
+          },
+          {
+              "number": 3,
+              "text": "tollaslabda",
+              "correct": true,
+              "_id": "6453de33e4656a8f824f9919"
+          },
+          {
+              "number": 4,
+              "text": "tenisz",
+              "correct": false,
+              "_id": "6453de33e4656a8f824f991a"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:32:51.290Z",
+      "updatedAt": "2023-05-04T16:32:51.290Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453de82e4656a8f824f991c",
+      "text": "Melyik sportágban versenyeznek a Grand Slam-tornákon?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "labdarúgás",
+              "correct": false,
+              "_id": "6453de82e4656a8f824f991d"
+          },
+          {
+              "number": 2,
+              "text": "röplabda",
+              "correct": false,
+              "_id": "6453de82e4656a8f824f991e"
+          },
+          {
+              "number": 3,
+              "text": "tenisz",
+              "correct": true,
+              "_id": "6453de82e4656a8f824f991f"
+          },
+          {
+              "number": 4,
+              "text": "kosárlabda",
+              "correct": false,
+              "_id": "6453de82e4656a8f824f9920"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:34:10.791Z",
+      "updatedAt": "2023-05-04T16:34:10.791Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453debee4656a8f824f9922",
+      "text": "Melyik sportágban versenyeznek a legnevesebb klubcsapatok a Bajnokok Ligájában?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "kosárlabda",
+              "correct": false,
+              "_id": "6453debee4656a8f824f9923"
+          },
+          {
+              "number": 2,
+              "text": "labdarúgás",
+              "correct": true,
+              "_id": "6453debee4656a8f824f9924"
+          },
+          {
+              "number": 3,
+              "text": "röplabda",
+              "correct": false,
+              "_id": "6453debee4656a8f824f9925"
+          },
+          {
+              "number": 4,
+              "text": "tenisz",
+              "correct": false,
+              "_id": "6453debee4656a8f824f9926"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:35:10.285Z",
+      "updatedAt": "2023-05-04T16:35:10.285Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453dedfe4656a8f824f9928",
+      "text": "Melyik sportágban használják a javelint?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "atlétika",
+              "correct": true,
+              "_id": "6453dedfe4656a8f824f9929"
+          },
+          {
+              "number": 2,
+              "text": "úszás",
+              "correct": false,
+              "_id": "6453dedfe4656a8f824f992a"
+          },
+          {
+              "number": 3,
+              "text": "kajak-kenu",
+              "correct": false,
+              "_id": "6453dedfe4656a8f824f992b"
+          },
+          {
+              "number": 4,
+              "text": "gimnasztika",
+              "correct": false,
+              "_id": "6453dedfe4656a8f824f992c"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:35:43.157Z",
+      "updatedAt": "2023-05-04T16:35:43.157Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453df07e4656a8f824f992e",
+      "text": "Melyik csapat nyerte meg a 2021-es UEFA Európa-ligát?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Manchester United",
+              "correct": false,
+              "_id": "6453df07e4656a8f824f992f"
+          },
+          {
+              "number": 2,
+              "text": "Arsenal",
+              "correct": false,
+              "_id": "6453df07e4656a8f824f9930"
+          },
+          {
+              "number": 3,
+              "text": "Chelsea",
+              "correct": true,
+              "_id": "6453df07e4656a8f824f9931"
+          },
+          {
+              "number": 4,
+              "text": "Villarreal",
+              "correct": false,
+              "_id": "6453df07e4656a8f824f9932"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:36:23.905Z",
+      "updatedAt": "2023-05-04T16:36:23.905Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453df1de4656a8f824f9934",
+      "text": "Melyik a legmagasabb hegycsúcs az Alpokban?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Mont Blanc",
+              "correct": true,
+              "_id": "6453df1de4656a8f824f9935"
+          },
+          {
+              "number": 2,
+              "text": "Matterhorn",
+              "correct": false,
+              "_id": "6453df1de4656a8f824f9936"
+          },
+          {
+              "number": 3,
+              "text": "Eiger",
+              "correct": false,
+              "_id": "6453df1de4656a8f824f9937"
+          },
+          {
+              "number": 4,
+              "text": "Jungfrau",
+              "correct": false,
+              "_id": "6453df1de4656a8f824f9938"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:36:45.845Z",
+      "updatedAt": "2023-05-04T16:36:45.845Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453e01ce4656a8f824f993a",
+      "text": "Ki nyerte meg az első modern Grand Prix-t?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Gyula Somogyi",
+              "correct": false,
+              "_id": "6453e01ce4656a8f824f993b"
+          },
+          {
+              "number": 2,
+              "text": "Zsolt Baumgartner",
+              "correct": false,
+              "_id": "6453e01ce4656a8f824f993c"
+          },
+          {
+              "number": 3,
+              "text": "Ferenc Szisz",
+              "correct": true,
+              "_id": "6453e01ce4656a8f824f993d"
+          },
+          {
+              "number": 4,
+              "text": "Tamás Helfferich",
+              "correct": false,
+              "_id": "6453e01ce4656a8f824f993e"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:41:00.140Z",
+      "updatedAt": "2023-05-04T16:41:00.140Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453e080e4656a8f824f9940",
+      "text": "Melyik ország rendezte meg a 2018-as labdarúgó-világbajnokságot?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Oroszország",
+              "correct": true,
+              "_id": "6453e080e4656a8f824f9941"
+          },
+          {
+              "number": 2,
+              "text": "Kína",
+              "correct": false,
+              "_id": "6453e080e4656a8f824f9942"
+          },
+          {
+              "number": 3,
+              "text": "Brazília",
+              "correct": false,
+              "_id": "6453e080e4656a8f824f9943"
+          },
+          {
+              "number": 4,
+              "text": "Ausztria",
+              "correct": false,
+              "_id": "6453e080e4656a8f824f9944"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:42:40.312Z",
+      "updatedAt": "2023-05-04T16:42:40.312Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453e0a3e4656a8f824f9946",
+      "text": "Melyik sportágban használják a legkisebb labdát?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Tenisz",
+              "correct": false,
+              "_id": "6453e0a3e4656a8f824f9947"
+          },
+          {
+              "number": 2,
+              "text": "Pingpong",
+              "correct": true,
+              "_id": "6453e0a3e4656a8f824f9948"
+          },
+          {
+              "number": 3,
+              "text": "Röplabda",
+              "correct": false,
+              "_id": "6453e0a3e4656a8f824f9949"
+          },
+          {
+              "number": 4,
+              "text": "Golf",
+              "correct": false,
+              "_id": "6453e0a3e4656a8f824f994a"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:43:15.266Z",
+      "updatedAt": "2023-05-04T16:43:15.266Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453e0d0e4656a8f824f994c",
+      "text": "Melyik sportágban nyert érmet Kozma Dominik a 2021-es olimpián?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Úszás",
+              "correct": true,
+              "_id": "6453e0d0e4656a8f824f994d"
+          },
+          {
+              "number": 2,
+              "text": "Atlétika",
+              "correct": false,
+              "_id": "6453e0d0e4656a8f824f994e"
+          },
+          {
+              "number": 3,
+              "text": "Kajak-kenu",
+              "correct": false,
+              "_id": "6453e0d0e4656a8f824f994f"
+          },
+          {
+              "number": 4,
+              "text": "Torna",
+              "correct": false,
+              "_id": "6453e0d0e4656a8f824f9950"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:44:00.601Z",
+      "updatedAt": "2023-05-04T16:44:00.601Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453e0fce4656a8f824f9952",
+      "text": "Melyik sportágban játszanak a legtöbben a világon?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Foci",
+              "correct": true,
+              "_id": "6453e0fce4656a8f824f9953"
+          },
+          {
+              "number": 2,
+              "text": "Kosárlabda",
+              "correct": false,
+              "_id": "6453e0fce4656a8f824f9954"
+          },
+          {
+              "number": 3,
+              "text": "Tenisz",
+              "correct": false,
+              "_id": "6453e0fce4656a8f824f9955"
+          },
+          {
+              "number": 4,
+              "text": "Rugby",
+              "correct": false,
+              "_id": "6453e0fce4656a8f824f9956"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:44:44.899Z",
+      "updatedAt": "2023-05-04T16:44:44.899Z",
+      "__v": 0
+  },
+  {
+      "_id": "6453e10fe4656a8f824f9958",
+      "text": "Melyik sportágban versenyeznek a Tour de France-on?",
+      "answers": [
+          {
+              "number": 1,
+              "text": "Úszás",
+              "correct": false,
+              "_id": "6453e10fe4656a8f824f9959"
+          },
+          {
+              "number": 2,
+              "text": "Kerékpár",
+              "correct": true,
+              "_id": "6453e10fe4656a8f824f995a"
+          },
+          {
+              "number": 3,
+              "text": "Torna",
+              "correct": false,
+              "_id": "6453e10fe4656a8f824f995b"
+          },
+          {
+              "number": 4,
+              "text": "Kosárlabda",
+              "correct": false,
+              "_id": "6453e10fe4656a8f824f995c"
+          }
+      ],
+      "userId": "6440e65eeb256de3ad346911",
+      "categoryIds": [
+          "644149c16ad6c72469794ba3"
+      ],
+      "createdAt": "2023-05-04T16:45:03.884Z",
+      "updatedAt": "2023-05-04T16:45:03.884Z",
+      "__v": 0
+  }
+]

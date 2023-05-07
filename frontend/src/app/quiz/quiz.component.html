@@ -1,1 +1,38 @@
-<p>quiz works!</p>
+<div class="quiz">
+  <div *ngIf="quiz;else quizNotAvailable">
+    <p class="quiz-title"> {{quiz.name}} </p>
+
+    <form #quizcheck="ngForm" (ngSubmit)="checkQuiz(quizcheck)" [attr.novalidate]="null">
+      <div *ngFor="let question of questions; index as i" class="question-item">
+        <p> {{i+1}}. {{question.text}} </p>
+        <p *ngFor="let answer of question.answers" class="answer-item">
+          <input type="radio" id="{{answer._id}}" name="{{question._id}}" value="{{answer.number}}" required ngModel disabled="{{formSubmitted}}">
+          <label
+            for="{{answer._id}}"
+            [ngClass]="{'answer-correct': correctAnswers.includes(answer._id), 'answer-incorrect': incorrectAnswers.includes(answer._id)}"
+          >{{answer.text}}</label><br>
+        </p>
+
+        <br>
+      </div>
+
+      <input type="submit" value="Kész" *ngIf="!formSubmitted">
+
+      <div *ngIf="formSubmitted">
+        {{questions.length}} kérdésre {{correctAnswers.length}} helyes választ adtál. - {{result}} pont.
+
+        <br><br>
+        <a [routerLink]="['/results']">Tovább az Eredményeim oldalra</a>
+        <br>
+        <a [routerLink]="['/quizzes']">Vissza a Kvízek oldalra</a>
+      </div>
+    </form>
+
+    <p class="quiz-error" *ngIf="error">{{errorMessage}}</p>
+  </div>
+
+  <ng-template #quizNotAvailable>
+    A kíz nem elérhető.
+  </ng-template>
+</div>
+
