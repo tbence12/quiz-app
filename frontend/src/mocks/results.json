@@ -1,0 +1,25 @@
+[
+  {
+      "_id": "6453eb00a55077d40bc8f5ab",
+      "result": 200,
+      "answers": [
+          {
+              "questionId": "645362d2df8bcfede29dac93",
+              "answerNumber": 1,
+              "correct": true,
+              "_id": "6453eb00a55077d40bc8f5ac"
+          },
+          {
+              "questionId": "6453d5d6e4656a8f824f986b",
+              "answerNumber": 1,
+              "correct": true,
+              "_id": "6453eb00a55077d40bc8f5ad"
+          }
+      ],
+      "userId": "643ff771eadeb200603933a7",
+      "quizId": "6453e57a822f1e8898fb260f",
+      "createdAt": "2023-05-04T17:27:28.962Z",
+      "updatedAt": "2023-05-04T17:27:28.962Z",
+      "__v": 0
+  }
+]
