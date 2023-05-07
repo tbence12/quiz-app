@@ -9,7 +9,7 @@ import { ScoresComponent } from './scores/scores.component';
 const routes: Routes = [
   {path: '', redirectTo: 'quizzes', pathMatch: 'full'},
   {path: 'quizzes', component: QuizzesComponent},
-  {path: 'quiz/:id', component: QuizComponent},
+  {path: 'quiz/:quizId', component: QuizComponent},
   {path: 'results', component: ResultsComponent},
   {path: 'scores', component: ScoresComponent},
   {path: '**', component: ErrorComponent}
