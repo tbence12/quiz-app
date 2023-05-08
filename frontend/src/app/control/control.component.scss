@@ -1,0 +1,53 @@
+.control {
+  margin: 52px auto 32px;
+  padding: 0 16px;
+  max-width: 75%;
+}
+
+.control-title {
+  text-align: center;
+  color: purple;
+  font-size: 18px;
+  margin-bottom: 30px !important;
+}
+
+.control-tab-content {
+  text-align: center;
+  font-weight: 500;
+}
+
+.quiz-title {
+  color: purple;
+  font-size: 15px;
+  margin: 20px 0 !important;
+}
+
+.quiz-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.quiz-saved {
+  color: rgb(0, 220, 0);
+  margin-top: 10px;
+}
+
+.quiz-item {
+  margin-top: 10px;
+}
+
+.add-button {
+  margin-top: 20px;
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+  color: black !important;
+}
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: purple !important;
+}
+
+.mat-mdc-tab-body-content {
+  overflow: hidden !important;
+}
