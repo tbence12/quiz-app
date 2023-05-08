@@ -1,0 +1,103 @@
+<div class="control">
+  <p class="control-title">Kezelő felület</p>
+
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Kvízek">
+      <div class="control-tab-content">
+        <table mat-table [dataSource]="quizzes" *ngIf="quizzes.length > 0;else quizzesNotAvailable">
+          <ng-container *ngFor="let tableInfo of quizzesTableInfos" [matColumnDef]="tableInfo.columnDef">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;">{{tableInfo.header}}</th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;">{{tableInfo.cell(element)}}</td>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;">Műveletek</th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;">
+              <button mat-icon-button (click)="editQuiz(element)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button (click)="deleteQuiz(element)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="quizzesTableColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: quizzesTableColumns;"></tr>
+        </table>
+
+        <ng-template #quizzesNotAvailable>
+          Nincs elérhető kvíz
+        </ng-template>
+
+        <div *ngIf="compileQuiz">
+          <p class="quiz-title">Új kvíz</p>
+          <form #quizcheck="ngForm" (ngSubmit)="checkQuiz(quizcheck)" [attr.novalidate]="null">
+            <div class="quiz-item">
+              <label for="quiz_name">Qvíz neve:</label>
+              <br>
+              <input type="text" name="quiz_name" ngModel required style="text-align: center;">
+              <br>
+            </div>
+            <div class="quiz-item">
+              <label for="quiz_questionids">Kvízben szereplő kérdések:</label>
+              <br>
+              <select name="quiz_questionids" ngModel required style="text-align: center;" multiple size="10">
+                <optgroup *ngFor="let question of questionSortByCategory | keyvalue" label="{{question.key}}">
+                  <option *ngFor="let questionValue of question.value" value="{{questionValue._id}}">{{questionValue.text}}</option>
+                </optgroup>
+              </select>
+              <br>
+              <i style="font-size: 12px;">(Több kiválasztása: CTRL+CLICK)</i>
+            </div>
+
+            <input type="submit" value="Kvíz mentés" *ngIf="!quizSaved" class="add-button">
+          </form>
+
+          <p class="quiz-error" *ngIf="quizError">{{quizErrorMessage}}</p>
+        </div>
+
+        <button class="add-button" (click)="clickCompileButton()">
+          {{compileQuiz ? 'Mégse' :'Kvíz összeállítás'}}
+        </button>
+
+        <div *ngIf="quizSaved" class="quiz-saved">
+            A kvíz elmentve
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Kérdések" class="center-tab-item">
+      <div class="control-tab-content">
+        <table mat-table [dataSource]="questions" *ngIf="questions.length > 0;else questionsNotAvailable">
+          <ng-container *ngFor="let tableInfo of questionsTableInfos" [matColumnDef]="tableInfo.columnDef">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;">{{tableInfo.header}}</th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;">{{tableInfo.cell(element)}}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="questionsTableColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: questionsTableColumns;"></tr>
+        </table>
+
+        <ng-template #questionsNotAvailable>
+          Nincs elérhető kérdés
+        </ng-template>
+      </div>
+    </mat-tab>
+    <mat-tab label="Kategóriák" class="center-tab-item">
+      <div class="control-tab-content">
+        <table mat-table [dataSource]="categories" *ngIf="categories.length > 0;else categoriesNotAvailable">
+          <ng-container *ngFor="let tableInfo of categoriesTableInfos" [matColumnDef]="tableInfo.columnDef">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;">{{tableInfo.header}}</th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;">{{tableInfo.cell(element)}}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="categoriesTableColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: categoriesTableColumns;"></tr>
+        </table>
+
+        <ng-template #categoriesNotAvailable>
+          Nincs elérhető kategória
+        </ng-template>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

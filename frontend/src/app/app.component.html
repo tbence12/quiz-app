@@ -4,16 +4,10 @@
       Quiz App
     </button>
     <span class="toolbar-spacer"></span>
-    <button mat-button aria-label="Quizzes" (click)="goTo('/quizzes')">
-      Kvízek
+    <button *ngFor="let nav of navs" mat-button (click)="goTo(nav.route)">
+      {{nav.name}}
     </button>
-    <button mat-button aria-label="Results" (click)="goTo('/results')">
-      Eredményeim
-    </button>
-    <button mat-button aria-label="Scores" (click)="goTo('/scores')">
-      Pontlista
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Login">
+    <button mat-icon-button class="example-icon" matTooltip="Bejelentkezés">
       <mat-icon>login</mat-icon>
     </button>
   </mat-toolbar>
