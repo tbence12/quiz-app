@@ -11,6 +11,7 @@ export type QuestionModel = {
   answers: AnswerModel[],
   userId: string,
   categoryIds: string[],
+  categoryName?: string,
   createdAt: string,
   updatedAt: string,
   __v: number
