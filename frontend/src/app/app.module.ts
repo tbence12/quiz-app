@@ -15,6 +15,9 @@ import { QuizzesComponent } from './quizzes/quizzes.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultsComponent } from './results/results.component';
 import { ControlComponent } from './control/control.component';
+import { LoginComponent } from './login/login.component';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ControlComponent } from './control/control.component';
     QuizzesComponent,
     QuizComponent,
     ResultsComponent,
-    ControlComponent
+    ControlComponent,
+    LoginComponent,
+    UnauthorizedComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

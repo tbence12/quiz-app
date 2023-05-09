@@ -7,7 +7,7 @@
     <button *ngFor="let nav of navs" mat-button (click)="goTo(nav.route)">
       {{nav.name}}
     </button>
-    <button mat-icon-button class="example-icon" matTooltip="Bejelentkezés">
+    <button mat-icon-button class="example-icon" matTooltip="Be/Kijelentkezés" (click)="goTo('/login')">
       <mat-icon>login</mat-icon>
     </button>
   </mat-toolbar>

@@ -1,0 +1,33 @@
+.login {
+  display: flex;
+  margin: 52px auto 32px;
+  padding: 0 16px;
+  max-width: 80%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  color: purple;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+form {
+  text-align: center;
+}
+
+.login-item {
+  margin-bottom: 10px;
+}
+
+.login-error {
+  color: red;
+  margin-top: 10px;
+}
