@@ -12,7 +12,11 @@ const QuizSchema = new Schema({
   questionIds: [{
     type: ObjectId,
     ref: 'Category'
-  }]
+  }],
+  isDeleted: {
+    type: Boolean,
+    default: false
+  }
 }, {timestamps:true})
 
 const QuizModel = mongoose.model('Quiz', QuizSchema);
