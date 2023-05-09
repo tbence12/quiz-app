@@ -19,7 +19,6 @@ app.use(bodyParser.json());
 const whiteList = ['http://localhost:4000', 'http://localhost:4200']
 
 app.use(cors({origin: function(origin, callback) {
-  console.log('origin: ', origin);
   if(whiteList.includes(origin) || origin === undefined) {
     callback(null, true);
   } else {
