@@ -1,0 +1,27 @@
+<div class="register">
+  <p class="register-title">Regisztráció</p>
+
+  <form #registercheck="ngForm" (ngSubmit)="checkRegister(registercheck)" [attr.novalidate]="null">
+    <div class="register-form">
+      <div class="register-item">
+        <label for="username">Felhasználónév: </label>
+        <input type="text" id="username" name="username" required ngModel>
+      </div>
+      <div class="register-item">
+        <label for="password">Jelszó: </label>
+        <input type="password" id="password" name="password" required ngModel>
+      </div>
+      <div class="register-item">
+        <label for="email">Email cím: </label>
+        <input type="email" id="email" name="email" required ngModel>
+      </div>
+      <div class="register-item">
+        <label for="year">Születési év: </label>
+        <input type="number" id="year" name="year" required ngModel min="1900" max="2099">
+      </div>
+    </div>
+    <input type="submit" value="Regisztrálok">
+  </form>
+
+  <p class="register-error" *ngIf="error">{{errorMessage}}</p>
+</div>
