@@ -6,8 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
 import { ErrorComponent } from './error/error.component';
 import { AngularMaterialModule } from './material.module';
 import { ScoresComponent } from './scores/scores.component';
@@ -22,8 +20,6 @@ import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent,
-    SecondComponent,
     ErrorComponent,
     ScoresComponent,
     QuizzesComponent,

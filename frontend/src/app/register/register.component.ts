@@ -18,7 +18,6 @@ export class RegisterComponent {
 
   register(user: UserModel) {
     this.userService.register(user).subscribe((response: any) => {
-      console.log(response);
       this.router.navigate(['/login']);
     }, error => {
       console.log('login error', error);
@@ -38,8 +37,7 @@ export class RegisterComponent {
           email,
           username,
           password,
-          year,
-          isAdmin: false
+          year
         }
 
         this.register(newUser);

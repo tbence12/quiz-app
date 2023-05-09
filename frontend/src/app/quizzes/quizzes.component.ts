@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 
 import * as mockQuizzes from 'src/mocks/quizzes.json';
 import { QuizModel } from 'src/models/quizModel';
+import { QuizService } from '../utils/quiz.service';
+import { InputUserModel } from 'src/models/userModel';
 
 @Component({
   selector: 'app-quizzes',
@@ -12,12 +14,18 @@ import { QuizModel } from 'src/models/quizModel';
 export class QuizzesComponent {
   quizzes: QuizModel[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private quizService: QuizService) { }
 
   ngOnInit(): void {
-    const stringQuizzes = JSON.stringify(mockQuizzes);
-    const parsedQuizzes = JSON.parse(stringQuizzes)
-    this.quizzes = parsedQuizzes.default;
+    const user = localStorage.getItem('user');
+    if(!user) { this.router.navigate(['/login']);}
+    const parsedUser: InputUserModel = JSON.parse(user as string);
+
+    this.quizService.getUnfilledQuizzes(parsedUser._id).subscribe((response: any) => {
+      this.quizzes = response;
+    }, error => {
+      console.log('quiz error', error);
+    })
   }
 
   goToQuiz(id: string) {
