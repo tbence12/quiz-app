@@ -3,7 +3,7 @@
 
   <table mat-table [dataSource]="scores" *ngIf="scoreTableColumns.length > 0;else scoresNotAvailable">
     <ng-container *ngFor="let tableInfo of scoreTableInfos" [matColumnDef]="tableInfo.columnDef">
-      <th mat-header-cell *matHeaderCellDef style="text-align: center;">{{tableInfo.header}}</th>
+      <th mat-header-cell *matHeaderCellDef style="text-align: center; color: aquamarine;">{{tableInfo.header}}</th>
       <td mat-cell *matCellDef="let element" style="text-align: center;">{{tableInfo.cell(element)}}</td>
     </ng-container>
 

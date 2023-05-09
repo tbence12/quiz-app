@@ -7,17 +7,20 @@
         <div class="control-tab-content">
           <table mat-table [dataSource]="quizzes" *ngIf="quizzes.length > 0;else quizzesNotAvailable">
             <ng-container *ngFor="let tableInfo of quizzesTableInfos" [matColumnDef]="tableInfo.columnDef">
-              <th mat-header-cell *matHeaderCellDef style="text-align: center;">{{tableInfo.header}}</th>
+              <th mat-header-cell *matHeaderCellDef style="text-align: center; color: aquamarine;">{{tableInfo.header}}</th>
               <td mat-cell *matCellDef="let element" style="text-align: center;">{{tableInfo.cell(element)}}</td>
             </ng-container>
             <ng-container matColumnDef="actions">
-              <th mat-header-cell *matHeaderCellDef style="text-align: center;">Műveletek</th>
+              <th mat-header-cell *matHeaderCellDef style="text-align: center; color: aquamarine;">Műveletek</th>
               <td mat-cell *matCellDef="let element" style="text-align: center;">
                 <button mat-icon-button (click)="editQuiz(element)">
                   <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button (click)="deleteQuiz(element)">
+                <button mat-icon-button (click)="deleteQuiz(element)" *ngIf="!element.isDeleted">
                   <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-icon-button (click)="restoreQuiz(element)" *ngIf="element.isDeleted">
+                  <mat-icon>restore_from_trash</mat-icon>
                 </button>
               </td>
             </ng-container>
@@ -72,7 +75,7 @@
         <div class="control-tab-content">
           <table mat-table [dataSource]="questions" *ngIf="questions.length > 0;else questionsNotAvailable">
             <ng-container *ngFor="let tableInfo of questionsTableInfos" [matColumnDef]="tableInfo.columnDef">
-              <th mat-header-cell *matHeaderCellDef style="text-align: center;">{{tableInfo.header}}</th>
+              <th mat-header-cell *matHeaderCellDef style="text-align: center; color: aquamarine;">{{tableInfo.header}}</th>
               <td mat-cell *matCellDef="let element" style="text-align: center;">{{tableInfo.cell(element)}}</td>
             </ng-container>
 
@@ -91,7 +94,7 @@
         <div class="control-tab-content">
           <table mat-table [dataSource]="categories" *ngIf="categories.length > 0;else categoriesNotAvailable">
             <ng-container *ngFor="let tableInfo of categoriesTableInfos" [matColumnDef]="tableInfo.columnDef">
-              <th mat-header-cell *matHeaderCellDef style="text-align: center;">{{tableInfo.header}}</th>
+              <th mat-header-cell *matHeaderCellDef style="text-align: center; color: aquamarine;">{{tableInfo.header}}</th>
               <td mat-cell *matCellDef="let element" style="text-align: center;">{{tableInfo.cell(element)}}</td>
             </ng-container>
 

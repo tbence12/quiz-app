@@ -3,7 +3,7 @@ export interface UserModel {
   username: string,
   password: string,
   year: number,
-  isAdmin: boolean,
+  isAdmin?: boolean,
 }
 
 export interface InputUserModel extends UserModel {

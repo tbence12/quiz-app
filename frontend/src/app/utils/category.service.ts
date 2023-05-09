@@ -5,11 +5,10 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ConnectionService {
-
+export class CategoryService {
   constructor(private http: HttpClient) { }
 
-  greet() {
-    return this.http.get(environment.serverUrl, {responseType: 'text'});
+  getCategories() {
+    return this.http.get(environment.serverUrl + `categories`, {withCredentials: true});
   }
 }

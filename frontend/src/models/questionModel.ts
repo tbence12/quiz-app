@@ -1,3 +1,5 @@
+import { CategoryModel } from "./categoryModel"
+
 type AnswerModel = {
   number: number,
   text: string,
@@ -5,7 +7,7 @@ type AnswerModel = {
   _id: string
 }
 
-export type QuestionModel = {
+export interface QuestionModel {
   _id: string,
   text: string,
   answers: AnswerModel[],
@@ -15,4 +17,8 @@ export type QuestionModel = {
   createdAt: string,
   updatedAt: string,
   __v: number
+}
+
+export interface InputQuestionModel extends QuestionModel {
+  categories: CategoryModel[]
 }

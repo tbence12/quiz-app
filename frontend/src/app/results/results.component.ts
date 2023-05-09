@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
-import * as mockResults from 'src/mocks/results.json';
-import * as mockQuizzes from 'src/mocks/quizzes.json';
-import { ResultModel } from 'src/models/resultModel';
+import { DisplayedResultModel } from 'src/models/resultModel';
+import { Router } from '@angular/router';
+import { ResultService } from '../utils/result.service';
+import { InputUserModel } from 'src/models/userModel';
 
 @Component({
   selector: 'app-results',
@@ -10,25 +11,20 @@ import { ResultModel } from 'src/models/resultModel';
   styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent {
-  results: ResultModel[] = [];
+  results: DisplayedResultModel[] = [];
+
+  constructor(private router: Router, private resultService: ResultService) { }
 
   ngOnInit(): void {
-    const stringResults = JSON.stringify(mockResults);
-    const parsedResults = JSON.parse(stringResults)
+    const user = localStorage.getItem('user');
+    if(!user) { this.router.navigate(['/login']);}
+    const parsedUser: InputUserModel = JSON.parse(user as string);
 
-    const stringQuizzes = JSON.stringify(mockQuizzes);
-    const parsedQuizzes = JSON.parse(stringQuizzes);
-
-    const mergedResults = [];
-    for(let result of parsedResults.default) {
-      const quiz = parsedQuizzes.default.find((quiz: { _id: any; }) => quiz._id === result.quizId);
-      mergedResults.push({
-        quizName: quiz.name,
-        ...result
-      })
-    }
-
-    this.results = mergedResults;
+    this.resultService.getUserResults(parsedUser._id).subscribe((response: any) => {
+      this.results = response;
+    }, error => {
+      console.log('result error', error);
+    })
   }
 
   totalScores() {

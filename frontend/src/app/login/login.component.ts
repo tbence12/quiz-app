@@ -24,7 +24,6 @@ export class LoginComponent {
     if(localStorage.getItem('user')) {
       localStorage.removeItem('user');
       this.loginService.logout().subscribe((response: any) => {
-        console.log(response.message);
       }, error => {
         console.log('logout error', error);
       })
@@ -34,7 +33,6 @@ export class LoginComponent {
   login() {
     if(this.username && this.password) {
       this.loginService.login(this.username, this.password).subscribe((response: any) => {
-        console.log(response.message);
         this.getUserInfos();
       }, error => {
         console.log('login error', error);

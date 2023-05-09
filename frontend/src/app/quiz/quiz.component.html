@@ -19,7 +19,7 @@
       <input type="submit" value="Kész" *ngIf="!formSubmitted">
 
       <div *ngIf="formSubmitted">
-        {{questions.length}} kérdésre {{correctAnswers.length}} helyes választ adtál. - {{result}} pont.
+        {{questions.length}} kérdésre {{correctAnswers.length}} helyes választ adtál. - {{result}} pont a jutalmad.
 
         <br><br>
         <a [routerLink]="['/results']">Tovább az Eredményeim oldalra</a>
