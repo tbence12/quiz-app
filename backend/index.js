@@ -14,7 +14,15 @@ database();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(cors());
+const whiteList = ['http://localhost:4200']
+
+app.use(cors({origin: function(origin, callback) {
+  if(whiteList.includes(origin) || origin === undefined) {
+    callback(null, true);
+  } else {
+    callback(new Error('CORS Error'));
+  }
+}, credentials: true, methods: "GET, PUT, POST, DELETE, OPTIONS"}));
 
 authentication(app);
 
