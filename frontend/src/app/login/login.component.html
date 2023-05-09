@@ -1,0 +1,21 @@
+<div class="login">
+  <p class="login-title">Bejelentkezés</p>
+
+  <form #logincheck="ngForm" (ngSubmit)="checkLogin(logincheck)" [attr.novalidate]="null">
+    <div class="login-form">
+      <div class="login-item">
+        <label for="username">Felhasználónév: </label>
+        <input type="text" id="username" name="username" required ngModel>
+      </div>
+      <div class="login-item">
+        <label for="password">Jelszó: </label>
+        <input type="password" id="password" name="password" required ngModel>
+      </div>
+    </div>
+    <input type="submit" value="Bejelentkezek">
+  </form>
+  <br>
+  <a [routerLink]="['/register']">Regisztrálok</a>
+
+  <p class="login-error" *ngIf="error">{{errorMessage}}</p>
+</div>

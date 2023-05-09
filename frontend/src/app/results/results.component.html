@@ -1,0 +1,17 @@
+<div class="results">
+  <p class="results-title">Eredményeim: </p>
+  <div *ngIf="results.length > 0;else quizNotAvailable">
+
+    <div *ngFor="let result of results" class="result-list">
+      <div>{{ result.quizName }}</div>
+      <div>{{ result.result }}</div>
+
+    </div>
+
+    <p class="results-summ">Összpontszám: {{totalScores()}}</p>
+  </div>
+
+  <ng-template #quizNotAvailable>
+    Még nincsen kvíz eredményed.
+  </ng-template>
+</div>

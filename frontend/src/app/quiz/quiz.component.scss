@@ -1,0 +1,36 @@
+.quiz {
+  display: flex;
+  margin: 52px auto 32px;
+  padding: 0 16px;
+  padding-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quiz-title {
+  color: purple;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.question-item {
+  text-align: left;
+}
+
+.answer-item {
+  padding-left: 20px;
+}
+
+.answer-correct {
+  color: rgb(0, 220, 0);
+}
+
+.answer-incorrect {
+  color: red;
+}
+
+.quiz-error {
+  color: red;
+  margin-top: 10px;
+}

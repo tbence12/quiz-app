@@ -1,0 +1,18 @@
+<div class="quizzes">
+  <p class="quizzes-title">Elérhető kvízek: </p>
+  <div *ngIf="quizzes.length > 0;else quizNotAvailable">
+
+    <div *ngFor="let quiz of quizzes" (click)="goToQuiz(quiz._id)" class="quiz-list">
+      <div>
+        {{ quiz.name }}
+      </div>
+      <button>Kitöltöm</button>
+    </div>
+
+    <p class="quizzes-summ">(Összesen: {{quizzes.length}})</p>
+  </div>
+
+  <ng-template #quizNotAvailable>
+    Számodra nincs több kitölthető kvíz.
+  </ng-template>
+</div>
