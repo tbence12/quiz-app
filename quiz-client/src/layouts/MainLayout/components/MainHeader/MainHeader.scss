@@ -1,0 +1,27 @@
+@import 'src/index';
+
+.header{
+  padding: 0;
+  text-align: center;
+  color: $primary-color;
+  border-top: 1px solid $secondary-color;
+  background: linear-gradient(90deg, rgba(0,21,41,1) 0%, rgb(0 38 92) 100%);
+}
+
+.quiz-logo {
+  font-style: italic;
+  font-size: large;
+}
+
+.collaps-button-container {
+  text-align: right;
+}
+
+.collaps-button {
+  font-size: 16px;
+  color: $primary-color;
+}
+
+.collaps-button:hover {
+  color: $secondary-color !important;
+}

@@ -1,0 +1,17 @@
+@import 'src/index';
+
+.layout {
+  min-height: 100vh;
+}
+
+.layout-background {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/assets/images/digitization-bg_1920.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.content {
+  padding: 0 16px;
+  color: $primary-color;
+}

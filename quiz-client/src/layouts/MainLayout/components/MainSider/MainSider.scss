@@ -1,0 +1,17 @@
+@import 'src/index';
+
+.sider {
+  border-top: 1px solid $secondary-color;
+}
+
+.sider-user {
+  height: inherit;
+  color: $secondary-color;
+}
+
+.sider-user-container {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255,255,255,.2);
+  border-radius: 6px;
+}
