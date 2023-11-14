@@ -39,16 +39,21 @@ function MainSider({
 MainSider.propTypes = {
   collapsed: PropTypes.bool.isRequired,
   setCollapsed: PropTypes.func.isRequired,
-  menukey: PropTypes.string.isRequired,
+  menukey: PropTypes.string,
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string.isRequired,
       icon: PropTypes.node.isRequired,
       children: PropTypes.node,
       label: PropTypes.string.isRequired,
+      path: PropTypes.string,
     }),
   ).isRequired,
   onMenuItemClick: PropTypes.func.isRequired,
+}
+
+MainSider.defaultProps = {
+  menukey: '1',
 }
 
 export default MainSider
