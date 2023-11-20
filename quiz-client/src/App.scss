@@ -1,3 +1,7 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/assets/images/digitization-bg_1920.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
 }

@@ -10,7 +10,7 @@ import {
 import { Layout } from 'antd'
 
 import useViewport from '../../hooks/useViewport'
-import { MainHeader } from './components/MainHeader'
+import { MainHeader } from '../../components/MainHeader'
 import { MainSider } from './components/MainSider'
 import { MainContent } from './components/MainContent'
 import './MainLayout.scss'
