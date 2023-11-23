@@ -16,4 +16,5 @@ function GameLayout() {
     </Layout>
   )
 }
+
 export default GameLayout

@@ -26,7 +26,8 @@
     "workbox-range-requests": "^6.6.0",
     "workbox-routing": "^6.6.0",
     "workbox-strategies": "^6.6.0",
-    "workbox-streams": "^6.6.0"
+    "workbox-streams": "^6.6.0",
+    "serverless-single-page-app-plugin": "file:./.serverless_plugins/serverless_single_page_app_plugin"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,7 +35,19 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx .",
-    "lint:fix": "eslint --ext .js,.jsx --fix ."
+    "lint:fix": "eslint --ext .js,.jsx --fix .",
+    "client:deploy": "sls client deploy --no-config-change --no-policy-change --no-cors-change",
+    "client:deploy:nc": "npm run client:deploy -- --no-confirm",
+    "client:build:deploy": "npm run build && npm run client:deploy",
+    "client:build:deploy:nc": "npm run build && npm run client:deploy:nc",
+    "cloudfront:setup": "sls deploy",
+    "cloudfront:domainInfo": "sls domainInfo",
+    "cloudfront:invalidateCache": "sls invalidateCloudFrontCache",
+    "cloudfront:build:deploy": "npm run client:build:deploy && npm run cloudfront:invalidateCache",
+    "cloudfront:build:deploy:nc": "npm run client:build:deploy:nc && npm run cloudfront:invalidateCache",
+    "cloudfront:update:build:deploy": "npm run cloudfront:setup && npm run cloudfront:build:deploy",
+    "cloudfront:update:build:deploy:nc": "npm run cloudfront:setup && npm run cloudfront:build:deploy:nc",
+    "serverless:remove": "sls remove"
   },
   "browserslist": {
     "production": [
@@ -58,6 +71,9 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "serverless": "^3.20.0",
+    "serverless-finch": "^4.0.0",
+    "serverless-s3-cleaner": "^2.0.1"
   }
 }
