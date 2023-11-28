@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from 'antd'
+import { FallbackScene } from '../../../../scenes/FallbackScene'
 
 import './MainContent.scss'
 
@@ -23,7 +24,7 @@ const NotFoundScene = lazy(() =>
 function MainContent() {
   return (
     <Content className="content">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<FallbackScene />}>
         <Routes>
           <Route path="/" element={<Navigate replace to="/quiz" />} />
           <Route path="/quiz" element={<QuizScene />} />

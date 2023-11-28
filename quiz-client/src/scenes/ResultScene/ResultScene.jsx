@@ -1,10 +1,10 @@
-import { SceneLayout } from '../../layouts/SceneLayout'
+import { Scene } from '../../components/Scene'
 
 function ResultScene() {
   return (
-    <SceneLayout title="Eredményeim">
+    <Scene title="Eredményeim">
       <span>Ide jönnek a kvíz eredményeim</span>
-    </SceneLayout>
+    </Scene>
   )
 }
 

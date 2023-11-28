@@ -1,7 +1,24 @@
+@import 'src/index';
+
 .App {
   text-align: center;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/assets/images/digitization-bg_1920.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #001529;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary-color; 
 }

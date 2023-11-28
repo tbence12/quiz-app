@@ -1,10 +1,10 @@
-import { SceneLayout } from '../../layouts/SceneLayout'
+import { Scene } from '../../components/Scene'
 
 function NotFoundScene() {
   return (
-    <SceneLayout title="Not found">
+    <Scene title="Not found">
       <span>A keresett oldal nem található</span>
-    </SceneLayout>
+    </Scene>
   )
 }
 

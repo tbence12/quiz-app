@@ -1,10 +1,10 @@
-import { SceneLayout } from '../../layouts/SceneLayout'
+import { Scene } from '../../components/Scene'
 
 function ScoreScene() {
   return (
-    <SceneLayout title="Pontlista">
+    <Scene title="Pontlista">
       <span>Ide jönnek a felhasználó összesített pontjai</span>
-    </SceneLayout>
+    </Scene>
   )
 }
 

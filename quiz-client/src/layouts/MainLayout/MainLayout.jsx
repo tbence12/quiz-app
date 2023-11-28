@@ -5,7 +5,7 @@ import {
   FileOutlined,
   TeamOutlined,
   UserOutlined,
-  LogoutOutlined,
+  PoweroffOutlined,
 } from '@ant-design/icons'
 import { Layout } from 'antd'
 
@@ -30,7 +30,7 @@ const siderMenuItems = [
   getItem('Eredményeim', '2', <UserOutlined />, '/result'),
   getItem('Pontlista', '3', <TeamOutlined />, '/score'),
   getItem('Kezelő', '4', <FileOutlined />, '/control'),
-  getItem('Kijelentkezés', '0', <LogoutOutlined />, '/'),
+  getItem('Kijelentkezés', '0', <PoweroffOutlined />, '/'),
 ]
 
 function MainLayout() {
@@ -77,7 +77,7 @@ function MainLayout() {
   }
 
   return (
-    <Layout className="layout">
+    <Layout hasSider className="layout">
       <Layout className="layout-background">
         <MainHeader collapsed={collapsed} setCollapsed={setCollapsed} />
         <MainContent />

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import './SceneLayout.scss'
+import './Scene.scss'
 
-function SceneLayout({ title, children }) {
+function Scene({ title, children }) {
   return (
     <div className="scene">
       <div className="scene-title">{title}</div>
@@ -10,9 +10,9 @@ function SceneLayout({ title, children }) {
   )
 }
 
-SceneLayout.propTypes = {
+Scene.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
 
-export default SceneLayout
+export default Scene
