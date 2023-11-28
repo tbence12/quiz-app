@@ -1,19 +1,46 @@
+import { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Card } from 'antd'
+import { Button } from 'antd'
 
-function QuizCard({ quizTitle, questionIds }) {
-  const questionIdItems = questionIds.map((questionId) => <li>{questionId}</li>)
+import './QuizCard.scss'
+
+function QuizCard({ quizTitle, questionIds, onClick }) {
+  const [style, setStyle] = useState({ display: 'none' })
+  const numberOfQuestions = questionIds.length
+
   return (
-    <Card title={quizTitle} bordered={false} style={{ width: 300 }}>
-      <p>Kérdés ID-k:</p>
-      <ul>{questionIdItems}</ul>
-    </Card>
+    <div
+      className="quiz-card"
+      onMouseEnter={() => {
+        setStyle({ display: 'block' })
+      }}
+      onMouseLeave={() => {
+        setStyle({ display: 'none' })
+      }}
+    >
+      <div className="quiz-card-header">
+        <span>{quizTitle}</span>
+      </div>
+      <div className="quiz-card-body">
+        <span>{numberOfQuestions} kérdés</span>
+      </div>
+      <div className="quiz-card-action">
+        <Button type="primary" style={style} onClick={onClick}>
+          Kvíz indítás
+        </Button>
+      </div>
+    </div>
   )
 }
 
 QuizCard.propTypes = {
   quizTitle: PropTypes.string.isRequired,
   questionIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onClick: PropTypes.func,
+}
+
+QuizCard.defaultProps = {
+  onClick: () => {},
 }
 
 export default QuizCard
