@@ -1,11 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import Quiz from '../apiCall/Quiz'
-
-export const FetchStatus = {
-  LOADING: 'loading',
-  IDLE: 'idle',
-  FAILED: 'failed',
-}
+import { FetchStatus } from '../constants'
 
 const initialState = {
   quizzes: [],
