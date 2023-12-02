@@ -14,6 +14,11 @@ export const getQuizzes = createAsyncThunk('quiz/getQuizzes', async () => {
   return response.data
 })
 
+export const getQuiz = createAsyncThunk('quiz/getQuiz', async (quizId) => {
+  const response = await Quiz.getQuiz(quizId)
+  return response.data
+})
+
 const quizSlice = createSlice({
   name: 'quiz',
   initialState,
@@ -32,6 +37,19 @@ const quizSlice = createSlice({
         state.quizzes = action.payload
       })
       .addCase(getQuizzes.rejected, (state, action) => {
+        state.status = FetchStatus.FAILED
+        if (action.payload) {
+          state.error = String(action.payload)
+        }
+      })
+      .addCase(getQuiz.pending, (state) => {
+        state.status = FetchStatus.LOADING
+      })
+      .addCase(getQuiz.fulfilled, (state, action) => {
+        state.status = FetchStatus.IDLE
+        state.selectedQuiz = action.payload
+      })
+      .addCase(getQuiz.rejected, (state, action) => {
         state.status = FetchStatus.FAILED
         if (action.payload) {
           state.error = String(action.payload)

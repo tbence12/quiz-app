@@ -1,6 +1,6 @@
 import { Scene } from '../../components/Scene'
 
-function ResultScene() {
+function ResultsScene() {
   return (
     <Scene title="Eredményeim">
       <span>Ide jönnek a kvíz eredményeim</span>
@@ -8,4 +8,4 @@ function ResultScene() {
   )
 }
 
-export default ResultScene
+export default ResultsScene

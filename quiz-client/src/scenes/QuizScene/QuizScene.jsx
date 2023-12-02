@@ -1,45 +1,42 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { Skeleton } from 'antd'
-import { QuizCard } from '../../components/QuizCard'
+import { useNavigate, useParams } from 'react-router-dom'
+import { Button, Skeleton } from 'antd'
 import { Scene } from '../../components/Scene'
-import { getQuizzes } from '../../app/slicers/quizSlice'
+import { getQuiz } from '../../app/slicers/quizSlice'
 import { FetchStatus } from '../../app/constants'
-
+import { FallbackScene } from '../FallbackScene'
 import './QuizScene.scss'
 
 function QuizScene() {
-  const { quizzes, status } = useSelector((state) => state.quiz)
-  const quizIsLoading = status === FetchStatus.LOADING
+  const { quizId } = useParams()
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const { selectedQuiz, status } = useSelector((state) => state.quiz)
+  const quizIsLoading = status === FetchStatus.LOADING
 
   useEffect(() => {
-    dispatch(getQuizzes())
-  }, [dispatch])
+    if (!selectedQuiz || selectedQuiz._id !== quizId) {
+      dispatch(getQuiz(quizId))
+    }
+  }, [dispatch, quizId, selectedQuiz])
 
-  const goToQuiz = (quizId) => {
-    navigate(`/game/${quizId}`)
+  const startQuiz = (startedQuizId) => {
+    navigate(`/game/${startedQuizId}`)
   }
-  const quizCardItems = quizzes.map((quiz) => {
-    // eslint-disable-next-line no-underscore-dangle
-    const quizId = quiz._id
 
-    return (
-      <QuizCard
-        key={quizId}
-        quizTitle={quiz.name}
-        questionIds={quiz.questionIds}
-        onClick={() => goToQuiz(quizId)}
-      />
-    )
-  })
+  if (!selectedQuiz) {
+    return <FallbackScene />
+  }
 
   return (
-    <Scene title="Kvíz lista">
+    <Scene title={selectedQuiz?.name}>
       <Skeleton loading={quizIsLoading}>
-        <div className="quiz-card-container">{quizCardItems}</div>
+        <Button type="primary" onClick={() => startQuiz(quizId)}>
+          Start Quiz
+        </Button>
+        <br />
+        (A gomb megnyomása után egyből indul a kvíz)
       </Skeleton>
     </Scene>
   )

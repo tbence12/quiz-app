@@ -24,6 +24,7 @@ function App() {
                     headerBg: '#33445480',
                     headerColor: '#Daa520',
                     headerSplitColor: '#Daa520',
+                    rowHoverBg: '#00152970',
                   },
                 },
               }}

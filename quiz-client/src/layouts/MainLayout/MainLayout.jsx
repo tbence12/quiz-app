@@ -26,9 +26,9 @@ const getItem = (label, key, icon, path, children) => {
 }
 
 const siderMenuItems = [
-  getItem('Kvízek', '1', <DesktopOutlined />, '/quiz'),
-  getItem('Eredményeim', '2', <UserOutlined />, '/result'),
-  getItem('Pontlista', '3', <TeamOutlined />, '/score'),
+  getItem('Kvízek', '1', <DesktopOutlined />, '/quizzes'),
+  getItem('Eredményeim', '2', <UserOutlined />, '/results'),
+  getItem('Pontlista', '3', <TeamOutlined />, '/scores'),
   getItem('Kezelő', '4', <FileOutlined />, '/control'),
   getItem('Kijelentkezés', '0', <PoweroffOutlined />, '/'),
 ]

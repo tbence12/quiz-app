@@ -1,5 +1,4 @@
 import { Layout, Spin } from 'antd'
-
 import { MainHeader } from '../../components/MainHeader'
 import './FallbackLayout.scss'
 

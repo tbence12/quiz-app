@@ -3,28 +3,31 @@
 .quiz-card {
   text-align: center;
   position: relative;
-  color: #fffc;
-  border: 1px solid rgba(217, 165, 32, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #33445480;
   border-radius: 0.5rem;
-  background: linear-gradient(90deg, rgba(0,38,92,0.6) 0%, rgba(0,21,41,0.6) 100%);
+  background: #33445480;
   max-width: 18rem;
   min-width: 15rem;
   height: 12rem;
   cursor: context-menu;
+  transition: 0.5s;
 }
 
 .quiz-card:hover {
   color: #fff;
-  border: 1px solid rgba(217, 165, 32, 0.7);
-  background: linear-gradient(90deg, rgba(0,21,41,0.8) 0%, rgba(0,38,92,0.8) 100%);
+  border: 1px solid rgba(217, 165, 32, 0.3);
+  background: rgba(0, 21, 41, 0.4588235294);
 }
 
 .quiz-card-header {
   border-bottom: 1px solid rgba(217, 165, 32, 0.3);
-  background: linear-gradient(90deg, #d9a52059 10%, #1677ff2b 100%);
+  background: #334454c0;
   font-size: 1rem;
   padding: 1rem;
-  color: white;
+  color: #Daa520;
+  font-weight: 600;
+  border-radius: 0.5rem;
 }
 
 .quiz-card-body {

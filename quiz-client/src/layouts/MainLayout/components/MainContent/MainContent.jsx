@@ -7,12 +7,15 @@ import './MainContent.scss'
 
 const { Content } = Layout
 
-const QuizScene = lazy(() => import('../../../../scenes/QuizScene/QuizScene'))
-const ResultScene = lazy(() =>
-  import('../../../../scenes/ResultScene/ResultScene'),
+const QuizzesScene = lazy(() =>
+  import('../../../../scenes/QuizzesScene/QuizzesScene'),
 )
-const ScoreScene = lazy(() =>
-  import('../../../../scenes/ScoreScene/ScoreScene'),
+const QuizScene = lazy(() => import('../../../../scenes/QuizScene/QuizScene'))
+const ResultsScene = lazy(() =>
+  import('../../../../scenes/ResultsScene/ResultsScene'),
+)
+const ScoresScene = lazy(() =>
+  import('../../../../scenes/ScoresScene/ScoresScene'),
 )
 const ControlScene = lazy(() =>
   import('../../../../scenes/ControlScene/ControlScene'),
@@ -26,11 +29,11 @@ function MainContent() {
     <Content className="content">
       <Suspense fallback={<FallbackScene />}>
         <Routes>
-          <Route path="/" element={<Navigate replace to="/quiz" />} />
-          <Route path="/quiz" element={<QuizScene />} />
-          <Route path="/quiz/:id" element={<QuizScene />} />
-          <Route path="/result" element={<ResultScene />} />
-          <Route path="/score" element={<ScoreScene />} />
+          <Route path="/" element={<Navigate replace to="/quizzes" />} />
+          <Route path="/quizzes" element={<QuizzesScene />} />
+          <Route path="/quiz/:quizId" element={<QuizScene />} />
+          <Route path="/results" element={<ResultsScene />} />
+          <Route path="/scores" element={<ScoresScene />} />
           <Route path="/control" element={<ControlScene />} />
           <Route path="/*" element={<NotFoundScene />} />
         </Routes>

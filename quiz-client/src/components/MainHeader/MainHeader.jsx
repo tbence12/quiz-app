@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { useNavigate } from 'react-router-dom'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
 import { Button, Col, Layout, Row } from 'antd'
 
@@ -8,12 +9,32 @@ const { Header } = Layout
 
 function MainHeader({ collapsed, setCollapsed }) {
   const collapsable = collapsed !== undefined
+  const navigate = useNavigate()
+
+  const goToMainPage = () => {
+    navigate('/')
+  }
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      navigate('/')
+    }
+  }
 
   return (
     <Header className="header">
       <Row>
         <Col span={8} offset={8}>
-          <span className="quiz-logo">iQuiz</span>
+          <span
+            className="quiz-logo"
+            role="button"
+            tabIndex="0"
+            onClick={() => goToMainPage()}
+            onKeyDown={handleKeyPress}
+          >
+            iQuiz
+          </span>
         </Col>
         {collapsable && (
           <Col span={8} className="collaps-button-container">

@@ -26,6 +26,7 @@
             "ignorePropertyModificationsFor": [
                 "state"
             ]
-        }]
+        }],
+        "no-underscore-dangle": "off"
     }
 }

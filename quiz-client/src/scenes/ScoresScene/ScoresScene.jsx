@@ -4,11 +4,27 @@ import { Skeleton, Table } from 'antd'
 import { Scene } from '../../components/Scene'
 import { getUsersResults } from '../../app/slicers/userSlice'
 import { FetchStatus } from '../../app/constants'
+import './ScoresScene.scss'
 
-function ScoreScene() {
+function ScoresScene() {
   const { usersScore, status } = useSelector((state) => state.user)
   const usersScoreIsLoading = status === FetchStatus.LOADING
   const dispatch = useDispatch()
+
+  const addPositionToScores = (scores) => {
+    const extendedResponse = []
+
+    for (let index = 0; index < scores.length; index += 1) {
+      const responseValues = scores[index]
+      const result = {
+        position: `${index + 1}.`,
+        ...responseValues,
+      }
+      extendedResponse.push(result)
+    }
+
+    return extendedResponse
+  }
 
   useEffect(() => {
     dispatch(getUsersResults())
@@ -16,19 +32,28 @@ function ScoreScene() {
 
   const columns = [
     {
+      title: 'Helyezés',
+      dataIndex: 'position',
+      key: 'position',
+      width: 50,
+    },
+    {
       title: 'Összpontszám',
       dataIndex: 'scores',
       key: 'scores',
+      align: 'center',
     },
     {
       title: 'Felhasználónév',
       dataIndex: 'username',
       key: 'username',
+      align: 'center',
     },
     {
       title: 'Születési év',
       dataIndex: 'year',
       key: 'year',
+      align: 'center',
     },
   ]
 
@@ -37,13 +62,14 @@ function ScoreScene() {
       <Skeleton loading={usersScoreIsLoading}>
         <Table
           rowKey="userId"
-          dataSource={usersScore}
+          dataSource={addPositionToScores(usersScore)}
           columns={columns}
           pagination={false}
+          className="scores-table"
         />
       </Skeleton>
     </Scene>
   )
 }
 
-export default ScoreScene
+export default ScoresScene
