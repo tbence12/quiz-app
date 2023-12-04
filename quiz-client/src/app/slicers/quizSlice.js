@@ -19,6 +19,30 @@ export const getQuiz = createAsyncThunk('quiz/getQuiz', async (quizId) => {
   return response.data
 })
 
+export const editQuiz = createAsyncThunk(
+  'quiz/editQuiz',
+  async ({ quizId, quizName }, { dispatch }) => {
+    await Quiz.editQuiz(quizId, quizName)
+    dispatch(getQuizzes())
+  },
+)
+
+export const deleteQuiz = createAsyncThunk(
+  'quiz/deleteQuiz',
+  async (quizId, { dispatch }) => {
+    await Quiz.deleteQuiz(quizId)
+    dispatch(getQuizzes())
+  },
+)
+
+export const restoreQuiz = createAsyncThunk(
+  'quiz/restoreQuiz',
+  async (quizId, { dispatch }) => {
+    await Quiz.restoreQuiz(quizId)
+    dispatch(getQuizzes())
+  },
+)
+
 const quizSlice = createSlice({
   name: 'quiz',
   initialState,

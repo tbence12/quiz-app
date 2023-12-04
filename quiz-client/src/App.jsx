@@ -26,6 +26,11 @@ function App() {
                     headerSplitColor: '#Daa520',
                     rowHoverBg: '#00152970',
                   },
+                  Tabs: {
+                    colorText: '#Daa520de',
+                    colorPrimary: '#4096ff',
+                    colorPrimaryActive: '#4096ff',
+                  },
                 },
               }}
             >

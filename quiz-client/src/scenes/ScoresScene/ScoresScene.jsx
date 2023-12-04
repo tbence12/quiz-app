@@ -6,6 +6,33 @@ import { getUsersResults } from '../../app/slicers/userSlice'
 import { FetchStatus } from '../../app/constants'
 import './ScoresScene.scss'
 
+const columns = [
+  {
+    title: 'Helyezés',
+    dataIndex: 'position',
+    key: 'position',
+    width: 50,
+  },
+  {
+    title: 'Összpontszám',
+    dataIndex: 'scores',
+    key: 'scores',
+    align: 'center',
+  },
+  {
+    title: 'Felhasználónév',
+    dataIndex: 'username',
+    key: 'username',
+    align: 'center',
+  },
+  {
+    title: 'Születési év',
+    dataIndex: 'year',
+    key: 'year',
+    align: 'center',
+  },
+]
+
 function ScoresScene() {
   const { usersScore, status } = useSelector((state) => state.user)
   const usersScoreIsLoading = status === FetchStatus.LOADING
@@ -29,33 +56,6 @@ function ScoresScene() {
   useEffect(() => {
     dispatch(getUsersResults())
   }, [dispatch])
-
-  const columns = [
-    {
-      title: 'Helyezés',
-      dataIndex: 'position',
-      key: 'position',
-      width: 50,
-    },
-    {
-      title: 'Összpontszám',
-      dataIndex: 'scores',
-      key: 'scores',
-      align: 'center',
-    },
-    {
-      title: 'Felhasználónév',
-      dataIndex: 'username',
-      key: 'username',
-      align: 'center',
-    },
-    {
-      title: 'Születési év',
-      dataIndex: 'year',
-      key: 'year',
-      align: 'center',
-    },
-  ]
 
   return (
     <Scene title="Pontlista">
