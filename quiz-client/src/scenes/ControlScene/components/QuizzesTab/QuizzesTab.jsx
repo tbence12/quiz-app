@@ -206,7 +206,7 @@ function QuizzesTab() {
           columns={mergedColumns}
           expandable={{
             expandedRowRender: (record) =>
-              record.questions.map((question) => {
+              record.questions.map((question, index) => {
                 return (
                   <p
                     style={{
@@ -216,7 +216,7 @@ function QuizzesTab() {
                     }}
                     key={question._id}
                   >
-                    {question.text}
+                    {`${index + 1}.  ${question.text}`}
                   </p>
                 )
               }),
