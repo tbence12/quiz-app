@@ -16,25 +16,27 @@ let userPoints = 0
 function QuestionContainer({ question, selected, select, selectedClass }) {
   const answerItems = question.answers.map((answer) => {
     return (
-      <Col key={answer._key} sm={24} md={12} xxl={6}>
-        <Button
-          className={`answer-button ${
-            selected === answer.number && selectedClass
-          } ${selected && selected !== answer.number && 'disabled-button'}`}
-          onClick={() => select(answer)}
-          disabled={selected && selected !== answer.number}
-        >
-          {answer.text}
-        </Button>
-      </Col>
+      <React.Fragment key={answer._id}>
+        <Col xs={24} md={12} xxl={6}>
+          <Button
+            className={`answer-button ${
+              selected === answer.number && selectedClass
+            } ${selected && selected !== answer.number && 'disabled-button'}`}
+            onClick={() => select(answer)}
+            disabled={selected}
+          >
+            {answer.text}
+          </Button>
+        </Col>
+      </React.Fragment>
     )
   })
 
   return (
-    <React.Fragment key={question._id}>
+    <>
       <h2>{question.text}</h2>
       <Row key={question._id}>{answerItems}</Row>
-    </React.Fragment>
+    </>
   )
 }
 

@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { message } from 'antd'
 
 const errorStatuses = [401, 403, 404, 500]
 
@@ -15,7 +14,8 @@ AxiosClient.interceptors.response.use(
   },
   (error) => {
     if (errorStatuses.includes(error.response.status)) {
-      message.error(error.message)
+      // eslint-disable-next-line no-console
+      console.error(error.message)
     }
     return Promise.reject(error.message)
   },

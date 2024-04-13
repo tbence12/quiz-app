@@ -13,15 +13,13 @@
 }
 
 .selected-button {
-  cursor: not-allowed;
-  color: $secondary-color;
+  color: $secondary-color !important;
 
   animation: blink .75s;
   animation-iteration-count: 4;
 }
 
 .selected-button:hover {
-  cursor: not-allowed;
   color: $secondary-color !important;
   background: #0006;
 }
@@ -30,13 +28,11 @@
 
 
 .correct-selected-button {
-  cursor: not-allowed;
   color: #00e800 !important;
   border-color: green !important;
 }
 
 .incorrect-selected-button {
-  cursor: not-allowed;
   color: red !important;
   border-color: #8f0000 !important;
 }

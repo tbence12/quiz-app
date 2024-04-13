@@ -30,7 +30,7 @@ const siderMenuItems = [
   getItem('Eredményeim', '2', <UserOutlined />, '/results'),
   getItem('Pontlista', '3', <TeamOutlined />, '/scores'),
   getItem('Kezelő', '4', <FileOutlined />, '/control'),
-  getItem('Kijelentkezés', '0', <PoweroffOutlined />, '/'),
+  getItem('Kijelentkezés', '0', <PoweroffOutlined />, '/login'),
 ]
 
 function MainLayout() {
@@ -64,11 +64,11 @@ function MainLayout() {
 
   const handleOnMenuItemClick = (item) => {
     const { key } = item
-    if (key === '0') {
-      // eslint-disable-next-line no-console
-      console.log('Kijelentkezés')
-      return
-    }
+    // if (key === '0') {
+    //   // eslint-disable-next-line no-console
+    //   console.log('Kijelentkezés')
+    //   return
+    // }
     const menuItem = siderMenuItems.find(
       (siderMenuItem) => siderMenuItem.key === key,
     )

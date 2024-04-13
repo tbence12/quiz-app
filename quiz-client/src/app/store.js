@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import {
+  authReducer,
   categoryReducer,
   questionReducer,
   quizReducer,
@@ -8,9 +9,10 @@ import {
 
 export const store = configureStore({
   reducer: {
-    quiz: quizReducer,
-    user: userReducer,
+    auth: authReducer,
     category: categoryReducer,
     question: questionReducer,
+    quiz: quizReducer,
+    user: userReducer,
   },
 })

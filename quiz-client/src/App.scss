@@ -27,3 +27,8 @@
 .ant-tabs-nav::before {
   border-bottom: 3px solid #334454 !important;
 }
+
+.ant-btn-default:disabled {
+  cursor: auto;
+  border-color: $primary-color;
+}

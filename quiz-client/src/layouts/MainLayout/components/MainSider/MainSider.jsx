@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types'
 import { UserOutlined } from '@ant-design/icons'
 import { Layout, Menu, Flex } from 'antd'
+import { useSelector } from 'react-redux'
 
 import './MainSider.scss'
 
 const { Sider } = Layout
+
+// LOGOUT
 
 function MainSider({
   collapsed,
@@ -13,6 +16,8 @@ function MainSider({
   menuItems,
   onMenuItemClick,
 }) {
+  const { user } = useSelector((state) => state.auth)
+
   return (
     <Sider
       className="sider"
@@ -22,7 +27,7 @@ function MainSider({
     >
       <div className="sider-user-container">
         <Flex className="sider-user" justify="center" align="center">
-          {collapsed ? <UserOutlined /> : 'Username'}
+          {collapsed ? <UserOutlined /> : user.username}
         </Flex>
       </div>
       <Menu

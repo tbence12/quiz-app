@@ -18,7 +18,7 @@ function MainHeader({ collapsed, setCollapsed }) {
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault()
-      navigate('/')
+      goToMainPage()
     }
   }
 
