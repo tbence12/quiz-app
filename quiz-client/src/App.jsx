@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { ConfigProvider } from 'antd'
 import { ErrorBoundary } from './components/ErrorBoundary'
+import { PrivateRoute } from './components/PrivateRoute'
 import ViewportProvider from './context/ViewportProvider'
 import { FallbackLayout, LoginLayout, MainLayout } from './layouts'
 import { theme } from './theme'
@@ -32,9 +33,12 @@ function App() {
                     path="/register"
                     element={<LoginLayout login={false} />}
                   />
+                  <Route path="/logout" element={<LoginLayout logout />} />
                   <Route path="/game/:quizId" element={<GameLayout />} />
                   <Route path="/game" element={<Navigate replace to="/" />} />
-                  <Route path="/*" element={<MainLayout />} />
+                  <Route path="/" element={<PrivateRoute />}>
+                    <Route path="/*" element={<MainLayout />} />
+                  </Route>
                 </Routes>
               </Suspense>
             </ConfigProvider>

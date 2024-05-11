@@ -13,7 +13,7 @@ AxiosClient.interceptors.response.use(
     return response
   },
   (error) => {
-    if (errorStatuses.includes(error.response.status)) {
+    if (errorStatuses.includes(error?.response?.status)) {
       // eslint-disable-next-line no-console
       console.error(error.message)
     }

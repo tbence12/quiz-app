@@ -30,7 +30,7 @@ const siderMenuItems = [
   getItem('Eredményeim', '2', <UserOutlined />, '/results'),
   getItem('Pontlista', '3', <TeamOutlined />, '/scores'),
   getItem('Kezelő', '4', <FileOutlined />, '/control'),
-  getItem('Kijelentkezés', '0', <PoweroffOutlined />, '/login'),
+  getItem('Kijelentkezés', '0', <PoweroffOutlined />, '/logout'),
 ]
 
 function MainLayout() {

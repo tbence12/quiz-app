@@ -27,7 +27,7 @@ function MainSider({
     >
       <div className="sider-user-container">
         <Flex className="sider-user" justify="center" align="center">
-          {collapsed ? <UserOutlined /> : user.username}
+          {collapsed ? <UserOutlined /> : user?.username}
         </Flex>
       </div>
       <Menu

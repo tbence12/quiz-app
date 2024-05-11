@@ -1,10 +1,9 @@
-import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { LockOutlined, UserOutlined } from '@ant-design/icons'
 import { Button, Form, Input, message } from 'antd'
 import { Scene } from '../../components/Scene'
-import { getUserStatus, logoutUser } from '../../app/slicers/authSlice'
+import { getUserStatus } from '../../app/slicers/authSlice'
 
 import './LoginScene.scss'
 import Auth from '../../app/apiCall/Auth'
@@ -41,13 +40,6 @@ function LoginScene() {
   //     }
   //   }
   // }, [dispatch, navigate])
-
-  useEffect(() => {
-    if (localStorage.getItem('user')) {
-      dispatch(logoutUser())
-      message.success('Sikeres kijelentkezés!')
-    }
-  }, [dispatch])
 
   return (
     <Scene title="Bejelentkezés">

@@ -12,7 +12,7 @@ function MainHeader({ collapsed, setCollapsed }) {
   const navigate = useNavigate()
 
   const goToMainPage = () => {
-    navigate('/')
+    navigate('/quizzes')
   }
 
   const handleKeyPress = (event) => {
