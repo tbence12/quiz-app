@@ -26,9 +26,9 @@ const columns = [
     align: 'center',
   },
   {
-    title: 'Születési év',
-    dataIndex: 'year',
-    key: 'year',
+    title: 'Életkor',
+    dataIndex: 'age',
+    key: 'age',
     align: 'center',
   },
 ]
@@ -38,13 +38,14 @@ function ScoresScene() {
   const usersScoreIsLoading = status === FetchStatus.LOADING
   const dispatch = useDispatch()
 
-  const addPositionToScores = (scores) => {
+  const addPositionAndAgeToScores = (scores) => {
     const extendedResponse = []
 
     for (let index = 0; index < scores.length; index += 1) {
       const responseValues = scores[index]
       const result = {
         position: `${index + 1}.`,
+        age: new Date().getFullYear() - responseValues.year,
         ...responseValues,
       }
       extendedResponse.push(result)
@@ -62,7 +63,7 @@ function ScoresScene() {
       <Skeleton loading={usersScoreIsLoading}>
         <Table
           rowKey="userId"
-          dataSource={addPositionToScores(usersScore)}
+          dataSource={addPositionAndAgeToScores(usersScore)}
           columns={columns}
           pagination={false}
           className="scores-table"

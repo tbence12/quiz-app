@@ -4,8 +4,6 @@ import { FallbackLayout } from '../../layouts'
 
 function PrivateRoute() {
   const { user, loading } = useSelector((state) => state.auth)
-  console.log(user)
-  console.log('loading: ', loading)
 
   if (loading) {
     return <FallbackLayout />
