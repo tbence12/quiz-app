@@ -14,5 +14,19 @@ export const theme = {
       colorPrimary: '#4096ff',
       colorPrimaryActive: '#4096ff',
     },
+    Steps: {
+      colorText: '#Daa520de',
+    },
+    Transfer: {
+      colorBgContainer: '#002344',
+      colorBorder: '#Daa520de',
+      colorText: '#Daa520de',
+    },
+    Card: {
+      colorBgContainer: '#708090a8',
+      colorBorderSecondary: '#Daa520de',
+      colorText: '#Daa520de',
+      colorTextHeading: '#Daa520de',
+    },
   },
 }

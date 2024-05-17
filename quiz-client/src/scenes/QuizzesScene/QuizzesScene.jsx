@@ -4,27 +4,31 @@ import { useNavigate } from 'react-router-dom'
 import { Skeleton } from 'antd'
 import { QuizCard } from '../../components/QuizCard'
 import { Scene } from '../../components/Scene'
-import { changeSelectedMovie, getQuizzes } from '../../app/slicers/quizSlice'
+import {
+  changeSelectedMovie,
+  getUnfilledQuizzes,
+} from '../../app/slicers/quizSlice'
 import { FetchStatus } from '../../app/constants'
 
 import './QuizzesScene.scss'
 
 function QuizzesScene() {
-  const { quizzes, status } = useSelector((state) => state.quiz)
+  const { user } = useSelector((state) => state.auth)
+  const { unfilledQuizzes, status } = useSelector((state) => state.quiz)
   const quizIsLoading = status === FetchStatus.LOADING
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
   useEffect(() => {
-    dispatch(getQuizzes())
-  }, [dispatch])
+    dispatch(getUnfilledQuizzes(user._id))
+  }, [dispatch, user._id])
 
   const goToQuiz = (quiz) => {
     dispatch(changeSelectedMovie(quiz))
     navigate(`/quiz/${quiz._id}`)
   }
 
-  const quizCardItems = quizzes.map((quiz) => {
+  const quizCardItems = unfilledQuizzes.map((quiz) => {
     return (
       <QuizCard
         key={quiz._id}

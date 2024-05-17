@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from 'antd'
 import { FallbackScene } from '../../../../scenes/FallbackScene'
-
+import { AdminRoute } from '../../../../components/AdminRoute'
 import './MainContent.scss'
 
 const { Content } = Layout
@@ -16,6 +16,9 @@ const ResultsScene = lazy(() =>
 )
 const ScoresScene = lazy(() =>
   import('../../../../scenes/ScoresScene/ScoresScene'),
+)
+const CreatorScene = lazy(() =>
+  import('../../../../scenes/CreatorScene/CreatorScene'),
 )
 const ControlScene = lazy(() =>
   import('../../../../scenes/ControlScene/ControlScene'),
@@ -34,7 +37,10 @@ function MainContent() {
           <Route path="/quiz/:quizId" element={<QuizScene />} />
           <Route path="/results" element={<ResultsScene />} />
           <Route path="/scores" element={<ScoresScene />} />
-          <Route path="/control" element={<ControlScene />} />
+          <Route path="/creator" element={<CreatorScene />} />
+          <Route path="/control" element={<AdminRoute />}>
+            <Route path="/control" element={<ControlScene />} />
+          </Route>
           <Route path="/*" element={<NotFoundScene />} />
         </Routes>
       </Suspense>

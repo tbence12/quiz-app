@@ -2,7 +2,7 @@ import { Scene } from '../../components/Scene'
 
 function NotFoundScene() {
   return (
-    <Scene title="Not found">
+    <Scene title="404">
       <span>A keresett oldal nem található</span>
     </Scene>
   )

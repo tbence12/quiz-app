@@ -81,7 +81,7 @@ function LoginScene() {
               htmlType="submit"
               className="login-form-button"
             >
-              Log in
+              Bejelentkezés
             </Button>
             <span className="login-register">
               Vagy{' '}

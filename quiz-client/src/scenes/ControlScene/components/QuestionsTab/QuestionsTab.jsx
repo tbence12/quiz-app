@@ -18,7 +18,7 @@ const columns = [
     key: '_id',
     align: 'center',
     width: 150,
-    render: (item) => item[0].name,
+    render: (item) => item[0]?.name,
   },
 ]
 

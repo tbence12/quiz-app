@@ -4,6 +4,7 @@ import { FetchStatus } from '../constants'
 
 const initialState = {
   quizzes: [],
+  unfilledQuizzes: [],
   status: FetchStatus.IDLE,
   loading: false,
   error: null,
@@ -15,6 +16,14 @@ export const getQuizzes = createAsyncThunk('quiz/getQuizzes', async () => {
   const response = await Quiz.getQuizzes()
   return response.data
 })
+
+export const getUnfilledQuizzes = createAsyncThunk(
+  'quiz/getUnfilledQuizzes',
+  async (userId) => {
+    const response = await Quiz.getUnfilledQuizzes(userId)
+    return response.data
+  },
+)
 
 export const getQuiz = createAsyncThunk('quiz/getQuiz', async (quizId) => {
   const response = await Quiz.getQuiz(quizId)
@@ -99,6 +108,22 @@ const quizSlice = createSlice({
         state.gameQuiz = action.payload
       })
       .addCase(getQuizWithQuestions.rejected, (state, action) => {
+        state.status = FetchStatus.FAILED
+        state.loading = false
+        if (action.payload) {
+          state.error = String(action.payload)
+        }
+      })
+      .addCase(getUnfilledQuizzes.pending, (state) => {
+        state.status = FetchStatus.LOADING
+        state.loading = true
+      })
+      .addCase(getUnfilledQuizzes.fulfilled, (state, action) => {
+        state.status = FetchStatus.IDLE
+        state.loading = false
+        state.unfilledQuizzes = action.payload
+      })
+      .addCase(getUnfilledQuizzes.rejected, (state, action) => {
         state.status = FetchStatus.FAILED
         state.loading = false
         if (action.payload) {

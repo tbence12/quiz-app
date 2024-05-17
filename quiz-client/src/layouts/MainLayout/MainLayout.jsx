@@ -6,6 +6,7 @@ import {
   TeamOutlined,
   UserOutlined,
   PoweroffOutlined,
+  FolderAddOutlined,
 } from '@ant-design/icons'
 import { Layout } from 'antd'
 
@@ -29,7 +30,8 @@ const siderMenuItems = [
   getItem('Kvízek', '1', <DesktopOutlined />, '/quizzes'),
   getItem('Eredményeim', '2', <UserOutlined />, '/results'),
   getItem('Pontlista', '3', <TeamOutlined />, '/scores'),
-  getItem('Kezelő', '4', <FileOutlined />, '/control'),
+  getItem('Kvíz készítő', '4', <FolderAddOutlined />, '/creator'),
+  getItem('Kezelő', '5', <FileOutlined />, '/control'),
   getItem('Kijelentkezés', '0', <PoweroffOutlined />, '/logout'),
 ]
 

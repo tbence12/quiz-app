@@ -6,7 +6,7 @@ const AxiosClient = axios.create()
 
 AxiosClient.defaults.baseURL = 'http://localhost:4000/'
 
-AxiosClient.defaults.timeout = 2000
+AxiosClient.defaults.timeout = 10000
 
 AxiosClient.interceptors.response.use(
   (response) => {
