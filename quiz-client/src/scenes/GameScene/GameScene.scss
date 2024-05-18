@@ -50,3 +50,15 @@
   border: 1px dashed #Daa520de;
   margin-top: 16px;
 }
+
+.result-label {
+  margin-top: 32px;
+  margin-bottom: 48px;
+  font-size: 18px;
+  color: #4e98ff;
+  
+  .result-score {
+    font-weight: bold;
+    color: #d9a520;
+  }
+}

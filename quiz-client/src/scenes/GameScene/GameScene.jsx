@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { Button, message, Steps, Col, Row } from 'antd'
 import PropTypes from 'prop-types'
 import { Scene } from '../../components/Scene'
+import Result from '../../app/apiCall/Result'
 import './GameScene.scss'
 
 const POINTS_PER_CORRECT_ANSWER = 100
@@ -41,10 +44,13 @@ function QuestionContainer({ question, selected, select, selectedClass }) {
 }
 
 function GameScene({ quiz }) {
+  const navigate = useNavigate()
+  const { user } = useSelector((state) => state.auth)
   const [current, setCurrent] = useState(0)
   const [nextButtonAvailable, setNextButtonAvailable] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [selectedClass, setSelectedClass] = useState(DEFAULT_SELECTED_CLASS)
+  const [isDone, setIsDone] = useState(false)
 
   const putAnswerIntoUserAnswers = (answer) => {
     const questionId = quiz.questions[current]._id
@@ -98,22 +104,49 @@ function GameScene({ quiz }) {
     setSelectedClass(DEFAULT_SELECTED_CLASS)
   }
 
-  const done = () => {
+  const done = async () => {
     message.success('Quiz completed!')
-    const savableQuiz = {
+
+    const userId = user?._id
+
+    const savableQuizResult = {
       answers: userAnswers,
       result: userPoints,
       quizId: quiz._id,
-      userId: '',
+      userId,
     }
 
-    console.log('savableQuiz: ', savableQuiz)
+    if (userId) {
+      await Result.addNewResult(savableQuizResult)
+    }
+
+    setIsDone(true)
+  }
+
+  const goToQuizzes = () => {
+    navigate('/quizzes')
   }
 
   const items = steps.map((item) => ({
     key: item.title,
     title: item.title,
   }))
+
+  if (isDone) {
+    return (
+      <Scene title={quiz.name}>
+        <div className="result-label">
+          Gratulálunk {user?.username ?? ''}!
+          <br />
+          Eredményed:
+          <span className="result-score"> {userPoints} pont</span>
+        </div>
+        <Button type="primary" onClick={() => goToQuizzes()}>
+          Vissza a kvízekhez
+        </Button>
+      </Scene>
+    )
+  }
 
   return (
     <Scene title={quiz.name}>

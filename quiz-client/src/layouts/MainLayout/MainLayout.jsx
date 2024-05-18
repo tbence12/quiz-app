@@ -66,11 +66,6 @@ function MainLayout() {
 
   const handleOnMenuItemClick = (item) => {
     const { key } = item
-    // if (key === '0') {
-    //   // eslint-disable-next-line no-console
-    //   console.log('Kijelentkezés')
-    //   return
-    // }
     const menuItem = siderMenuItems.find(
       (siderMenuItem) => siderMenuItem.key === key,
     )

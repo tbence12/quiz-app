@@ -66,7 +66,7 @@ const quizSlice = createSlice({
   name: 'quiz',
   initialState,
   reducers: {
-    changeSelectedMovie: (state, action) => {
+    changeSelectedQuiz: (state, action) => {
       state.selectedQuiz = action.payload
     },
   },
@@ -133,7 +133,7 @@ const quizSlice = createSlice({
   },
 })
 
-export const { changeSelectedMovie } = quizSlice.actions
+export const { changeSelectedQuiz } = quizSlice.actions
 
 const quizReducer = quizSlice.reducer
 

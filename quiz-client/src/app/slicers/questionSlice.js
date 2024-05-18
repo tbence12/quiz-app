@@ -26,7 +26,7 @@ export const getRawQuestions = createAsyncThunk(
   },
 )
 
-const categorySlice = createSlice({
+const questionSlice = createSlice({
   name: 'question',
   initialState,
   extraReducers: (builder) => {
@@ -66,6 +66,6 @@ const categorySlice = createSlice({
   },
 })
 
-const categoryReducer = categorySlice.reducer
+const questionReducer = questionSlice.reducer
 
-export default categoryReducer
+export default questionReducer

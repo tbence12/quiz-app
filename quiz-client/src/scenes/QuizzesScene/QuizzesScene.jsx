@@ -5,7 +5,7 @@ import { Skeleton } from 'antd'
 import { QuizCard } from '../../components/QuizCard'
 import { Scene } from '../../components/Scene'
 import {
-  changeSelectedMovie,
+  changeSelectedQuiz,
   getUnfilledQuizzes,
 } from '../../app/slicers/quizSlice'
 import { FetchStatus } from '../../app/constants'
@@ -24,7 +24,7 @@ function QuizzesScene() {
   }, [dispatch, user._id])
 
   const goToQuiz = (quiz) => {
-    dispatch(changeSelectedMovie(quiz))
+    dispatch(changeSelectedQuiz(quiz))
     navigate(`/quiz/${quiz._id}`)
   }
 
