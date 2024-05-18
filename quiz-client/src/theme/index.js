@@ -28,5 +28,8 @@ export const theme = {
       colorText: '#Daa520de',
       colorTextHeading: '#Daa520de',
     },
+    Form: {
+      labelColor: '#D9A520',
+    },
   },
 }

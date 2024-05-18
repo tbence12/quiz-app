@@ -7,6 +7,7 @@ import { MainHeader } from '../../components/MainHeader'
 import './LoginLayout.scss'
 import { LoginScene } from '../../scenes/LoginScene'
 import { logoutUser } from '../../app/slicers/authSlice'
+import { RegisterScene } from '../../scenes/RegisterScene'
 
 function LoginLayout({ login, logout }) {
   const navigate = useNavigate()
@@ -30,7 +31,7 @@ function LoginLayout({ login, logout }) {
     <Layout className="layout">
       <Layout className="layout-background">
         <MainHeader />
-        {login ? <LoginScene /> : <LoginScene />}
+        {login ? <LoginScene /> : <RegisterScene />}
       </Layout>
     </Layout>
   )
