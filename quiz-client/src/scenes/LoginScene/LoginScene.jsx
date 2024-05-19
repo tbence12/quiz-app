@@ -9,7 +9,6 @@ import './LoginScene.scss'
 import Auth from '../../app/apiCall/Auth'
 
 function LoginScene() {
-  // const { status } = useSelector((state) => state.auth)
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
@@ -29,17 +28,6 @@ function LoginScene() {
   const goToRegistration = () => {
     navigate('/register')
   }
-
-  // const checkUser = useCallback(async () => {
-  //   if (localStorage.getItem('user')) {
-  //     try {
-  //       await dispatch(getUserStatus())
-  //       navigate('/quizzes')
-  //     } catch (error) {
-  //       message.error('Sikertelen felhasználó azonosítás, jelentkezz be újra!')
-  //     }
-  //   }
-  // }, [dispatch, navigate])
 
   return (
     <Scene title="Bejelentkezés">

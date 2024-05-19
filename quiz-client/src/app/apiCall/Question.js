@@ -5,6 +5,8 @@ const Question = {
   getRawQuestions: async () => AxiosClient.get('questions'),
   addNewQuestion: async (question) =>
     AxiosClient.post('questions', { ...question }),
+  generateQuestions: async (question) =>
+    AxiosClient.post('questions/generate', { ...question }),
 }
 
 export default Question

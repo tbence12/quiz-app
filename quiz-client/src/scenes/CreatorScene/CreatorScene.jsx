@@ -11,7 +11,6 @@ import {
   Input,
   InputNumber,
   Select,
-  Skeleton,
   Space,
   Steps,
   Switch,
@@ -22,6 +21,7 @@ import {
   CloseOutlined,
   QuestionOutlined,
 } from '@ant-design/icons'
+import Search from 'antd/es/input/Search'
 import { Scene } from '../../components/Scene'
 import './CreatorScene.scss'
 import { getRawQuestions } from '../../app/slicers/questionSlice'
@@ -159,9 +159,7 @@ function AddQuestions({ quizName, myQuestions, setMyQuestions }) {
           Kvíz neve: <span className="quiz-name">{quizName}</span>
         </b>
       </div>
-      <Skeleton loading={loading}>
-        <Select allowClear {...sharedProps} {...selectProps} />
-      </Skeleton>
+      <Select allowClear disabled={loading} {...sharedProps} {...selectProps} />
       <div className="and-or">És / Vagy</div>
       <CustomQuestions quizName={quizName} myQuestions={myQuestions} />
     </>
@@ -199,9 +197,10 @@ function CustomQuestions({ quizName, myQuestions }) {
   const [form] = Form.useForm()
   const navigate = useNavigate()
 
-  const addNewQuestionToForm = () => {
+  const addNewQuestionToForm = (question) => {
+    const newQuestion = question ?? GeneralQuestion()
     const { items } = form.getFieldsValue()
-    const newItems = [...items, GeneralQuestion()]
+    const newItems = [...items, newQuestion]
     form.setFieldsValue({ items: newItems })
   }
 
@@ -269,149 +268,222 @@ function CustomQuestions({ quizName, myQuestions }) {
     message.success('Sikertelen kvíz létrehozás!')
   }
 
-  return (
-    <Form
-      labelCol={{
-        span: 6,
-      }}
-      wrapperCol={{
-        span: 18,
-      }}
-      form={form}
-      name="dynamic_form_complex"
+  const { Option } = Select
+
+  const [generateQuestionNumber, setGenerateQuestionNumber] = useState('Egy db')
+  const [generateInputStatus, setGenerateInputStatus] = useState('')
+  const [isGenerateLoading, setIsGenerateLoading] = useState(false)
+
+  const selectBefore = (
+    <Select
       style={{
-        maxWidth: 600,
+        width: '20%',
       }}
-      autoComplete="off"
-      initialValues={{
-        items: [],
-      }}
-      onFinish={createQuiz}
+      defaultValue="Egy db"
+      value={generateQuestionNumber}
+      onChange={setGenerateQuestionNumber}
+      disabled
     >
-      <Form.List name="items">
-        {(fields, { remove }) => (
-          <div
+      <Option value="Egy db">Egy db</Option>
+      <Option value="Kettő db">Kettő db</Option>
+      <Option value="Három db">Három db</Option>
+    </Select>
+  )
+
+  const onSearch = async (topic) => {
+    setIsGenerateLoading(true)
+
+    if (!topic) {
+      setGenerateInputStatus('error')
+      setIsGenerateLoading(false)
+      return
+    }
+
+    const response = await Question.generateQuestions({ topic })
+    console.log(response.data)
+    const { text, answers } = response.data
+
+    addNewQuestionToForm({ text, answers })
+
+    setIsGenerateLoading(false)
+  }
+
+  return (
+    <>
+      <Space
+        direction="vertical"
+        style={{
+          width: '100%',
+          marginBottom: '20px',
+        }}
+      >
+        <Space.Compact
+          style={{
+            width: '100%',
+          }}
+        >
+          {selectBefore}
+          <Search
             style={{
-              display: 'flex',
-              rowGap: 16,
-              flexDirection: 'column',
+              width: '80%',
             }}
-          >
-            {fields.map((field) => (
-              <Card
-                size="small"
-                title={`${field.name + 1}. Új kérdés`}
-                key={field.key}
-                extra={
-                  <CloseOutlined
-                    onClick={() => {
-                      remove(field.name)
-                    }}
-                  />
-                }
-              >
-                <Form.Item
-                  label="Kérdés"
-                  name={[field.name, 'text']}
-                  rules={[
-                    {
-                      required: true,
-                      message: `Kérlek töltsd ki a kérdést!`,
-                    },
-                  ]}
+            status={generateInputStatus}
+            placeholder="(pl. II. Világháború) témájú kérdés"
+            enterButton="Generálás"
+            loading={isGenerateLoading}
+            onSearch={onSearch}
+          />
+        </Space.Compact>
+      </Space>
+      <Form
+        labelCol={{
+          span: 6,
+        }}
+        wrapperCol={{
+          span: 18,
+        }}
+        form={form}
+        name="dynamic_form_complex"
+        style={{
+          maxWidth: 600,
+        }}
+        autoComplete="off"
+        initialValues={{
+          items: [],
+        }}
+        onFinish={createQuiz}
+      >
+        <Form.List name="items">
+          {(fields, { remove }) => (
+            <div
+              style={{
+                display: 'flex',
+                rowGap: 16,
+                flexDirection: 'column',
+              }}
+            >
+              {fields.map((field) => (
+                <Card
+                  size="small"
+                  title={`${field.name + 1}. Új kérdés`}
+                  key={field.key}
+                  extra={
+                    <CloseOutlined
+                      onClick={() => {
+                        remove(field.name)
+                      }}
+                    />
+                  }
                 >
-                  <Input placeholder={`${field.name + 1}. kérdés`} />
-                </Form.Item>
+                  <Form.Item
+                    label="Kérdés"
+                    name={[field.name, 'text']}
+                    rules={[
+                      {
+                        required: true,
+                        message: `Kérlek töltsd ki a kérdést!`,
+                      },
+                    ]}
+                  >
+                    <Input placeholder={`${field.name + 1}. kérdés`} />
+                  </Form.Item>
 
-                {/* Nest Form.List */}
-                <Form.Item label="Válaszok">
-                  <Form.List name={[field.name, 'answers']}>
-                    {(subFields) => (
-                      <div
-                        style={{
-                          display: 'flex',
-                          flexDirection: 'column',
-                          rowGap: 16,
-                        }}
-                      >
-                        {subFields.map((subField) => (
-                          <Space key={subField.key}>
-                            <Form.Item noStyle name={[subField.name, 'number']}>
-                              <InputNumber
-                                style={{
-                                  width: 31,
-                                  color: '#DAA520',
-                                }}
-                                disabled
-                              />
-                            </Form.Item>
-                            <Form.Item
-                              noStyle
-                              name={[subField.name, 'text']}
-                              rules={[
-                                {
-                                  required: true,
-                                  message: `Kérlek add meg a(z) ${
-                                    subField.key + 1
-                                  }. választ!`,
-                                },
-                              ]}
-                            >
-                              <Input
-                                placeholder={`${subField.key + 1}. válasz`}
-                              />
-                            </Form.Item>
-                            <Form.Item
-                              noStyle
-                              name={[subField.name, 'correct']}
-                              valuePropName="checked"
-                            >
-                              <Switch
-                                checkedChildren="Helyes"
-                                unCheckedChildren="Helytelen"
-                                onChange={(checked) =>
-                                  onSwitchChange(
-                                    checked,
-                                    field.key,
-                                    subField.key,
-                                  )
-                                }
-                              />
-                            </Form.Item>
-                          </Space>
-                        ))}
-                      </div>
-                    )}
-                  </Form.List>
-                </Form.Item>
-              </Card>
-            ))}
+                  {/* Nest Form.List */}
+                  <Form.Item label="Válaszok">
+                    <Form.List name={[field.name, 'answers']}>
+                      {(subFields) => (
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            rowGap: 16,
+                          }}
+                        >
+                          {subFields.map((subField) => (
+                            <Space key={subField.key}>
+                              <Form.Item
+                                noStyle
+                                name={[subField.name, 'number']}
+                              >
+                                <InputNumber
+                                  style={{
+                                    width: 31,
+                                    color: '#DAA520',
+                                  }}
+                                  disabled
+                                />
+                              </Form.Item>
+                              <Form.Item
+                                noStyle
+                                name={[subField.name, 'text']}
+                                rules={[
+                                  {
+                                    required: true,
+                                    message: `Kérlek add meg a(z) ${
+                                      subField.key + 1
+                                    }. választ!`,
+                                  },
+                                ]}
+                              >
+                                <Input
+                                  placeholder={`${subField.key + 1}. válasz`}
+                                />
+                              </Form.Item>
+                              <Form.Item
+                                noStyle
+                                name={[subField.name, 'correct']}
+                                valuePropName="checked"
+                              >
+                                <Switch
+                                  checkedChildren="Helyes"
+                                  unCheckedChildren="Helytelen"
+                                  onChange={(checked) =>
+                                    onSwitchChange(
+                                      checked,
+                                      field.key,
+                                      subField.key,
+                                    )
+                                  }
+                                />
+                              </Form.Item>
+                            </Space>
+                          ))}
+                        </div>
+                      )}
+                    </Form.List>
+                  </Form.Item>
+                </Card>
+              ))}
 
-            {/* <Button type="dashed" onClick={() => add()} block> */}
-            <Button type="dashed" onClick={() => addNewQuestionToForm()} block>
-              + Új kérdés hozzáadás
+              <Button
+                type="dashed"
+                onClick={() => addNewQuestionToForm()}
+                block
+              >
+                + Új kérdés hozzáadás
+              </Button>
+            </div>
+          )}
+        </Form.List>
+
+        <Form.Item noStyle shouldUpdate>
+          {() => (
+            <Button
+              type="primary"
+              htmlType="submit"
+              disabled={
+                form?.getFieldsValue()?.items?.length < 1 &&
+                myQuestions.length < 1
+              }
+              className="create-quiz-button"
+            >
+              Kvíz készítése
             </Button>
-          </div>
-        )}
-      </Form.List>
-
-      <Form.Item noStyle shouldUpdate>
-        {() => (
-          <Button
-            type="primary"
-            htmlType="submit"
-            disabled={
-              form?.getFieldsValue()?.items?.length < 1 &&
-              myQuestions.length < 1
-            }
-            className="create-quiz-button"
-          >
-            Kvíz készítése
-          </Button>
-        )}
-      </Form.Item>
-      <div>{myQuestions}</div>
-    </Form>
+          )}
+        </Form.Item>
+        <div>{myQuestions}</div>
+      </Form>
+    </>
   )
 }
 

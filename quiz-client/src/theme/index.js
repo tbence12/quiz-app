@@ -31,5 +31,9 @@ export const theme = {
     Form: {
       labelColor: '#D9A520',
     },
+    Select: {
+      colorBgContainerDisabled: '#ffffffa0',
+      colorTextDisabled: '#000',
+    },
   },
 }
