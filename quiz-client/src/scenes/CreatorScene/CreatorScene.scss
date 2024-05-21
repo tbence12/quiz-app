@@ -1,0 +1,54 @@
+@import 'src/index';
+
+.creator-title {
+  color: #DAA520;
+  margin-bottom: 8px;
+}
+
+.creator-container {
+  display: flex;
+
+  .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .content {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+}
+
+.steps-container {
+  width: 40%;
+  display: flex;
+}
+
+.step-buttons {
+  margin-top: 24px;
+
+  .prev-button {
+    margin: 0 8px;
+  }
+}
+
+.quiz-name {
+  color: #DAA520;
+}
+
+.and-or {
+  margin: 12px 0;
+}
+
+.create-quiz-button {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .creator-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

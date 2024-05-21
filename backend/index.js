@@ -16,7 +16,7 @@ database();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const whiteList = ['http://localhost:4000', 'http://localhost:4200']
+const whiteList = ['http://localhost:3000', 'http://localhost:4000', 'http://localhost:4200']
 
 app.use(cors({origin: function(origin, callback) {
   if(whiteList.includes(origin) || origin === undefined) {

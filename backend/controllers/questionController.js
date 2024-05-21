@@ -1,4 +1,5 @@
 import QuestionModel from '../models/questionModel';
+import { getCompletion } from '../openai';
 
 export const addNewQuestion = (req, res) => {
   let newQuestion = new QuestionModel(req.body);
@@ -59,6 +60,17 @@ export const getQuestionsWithCategoryName = async (req, res) => {
     ]).exec();
   
     res.json(questions);
+  } catch (error) {
+    res.status(500).json({message: error.message});
+  }
+}
+
+export const generateQuestions = async (req, res) => {
+  try {
+    const {topic} = req.body;
+    console.log('topic: ', topic)
+    const completion = await getCompletion(topic)
+    res.json(completion);
   } catch (error) {
     res.status(500).json({message: error.message});
   }

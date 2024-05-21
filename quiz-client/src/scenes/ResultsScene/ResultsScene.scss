@@ -1,0 +1,18 @@
+@import 'src/index';
+
+.summ-results {
+  margin-bottom: 16px;
+  font-size: 16px;
+
+  .summ-value {
+    color: #DAA520;
+  }
+}
+
+.results-table {
+  overflow-y: auto;
+
+  td {
+    text-align: center;
+  }
+}

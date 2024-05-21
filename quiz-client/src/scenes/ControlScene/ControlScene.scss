@@ -1,0 +1,5 @@
+@import 'src/index';
+
+.control-tabs && .ant-tabs-nav::before {
+  border-bottom: 3px solid #001529 !important;
+}

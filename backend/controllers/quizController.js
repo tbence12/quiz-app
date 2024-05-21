@@ -91,3 +91,22 @@ export const getQuizWithQuestions = async (req, res) => {
     res.status(500).json({message: error.message});
   }
 }
+
+export const getQuizzesWithQuestions = async (req, res) => {
+  try {
+    const quizzes = await QuizModel.aggregate([
+      {
+        $lookup: {
+          from: "questions",
+          localField: "questionIds",
+          foreignField: "_id",
+          as: "questions"
+        }
+      },
+    ]).exec();
+  
+    res.json(quizzes);
+  } catch (error) {
+    res.status(500).json({message: error.message});
+  }
+}

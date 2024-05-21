@@ -1,0 +1,9 @@
+@import 'src/index';
+
+.layout {
+  min-height: 100vh;
+}
+
+.layout, .layout-background {
+  background-color: transparent;
+}

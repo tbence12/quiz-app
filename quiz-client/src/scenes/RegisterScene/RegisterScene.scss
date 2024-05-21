@@ -1,0 +1,31 @@
+@import 'src/index';
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.login-form {
+  width: 300px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.ant-col-rtl .login-form-forgot {
+  float: left;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.site-form-item-icon, .login-register {
+  color: #d9a520;
+}
+
+.register-link {
+  padding: 0;
+}

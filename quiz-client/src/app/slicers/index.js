@@ -1,0 +1,5 @@
+export { default as authReducer } from './authSlice'
+export { default as categoryReducer } from './categorySlice'
+export { default as questionReducer } from './questionSlice'
+export { default as quizReducer } from './quizSlice'
+export { default as userReducer } from './userSlice'

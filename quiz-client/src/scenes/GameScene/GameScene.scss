@@ -1,0 +1,64 @@
+@import 'src/index';
+
+.answer-button {
+  width: -webkit-fill-available;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0005;
+  border-color: $primary-color;
+  color: #ffffffe2;
+}
+
+.selected-button {
+  color: $secondary-color !important;
+
+  animation: blink .75s;
+  animation-iteration-count: 4;
+}
+
+.selected-button:hover {
+  color: $secondary-color !important;
+  background: #0006;
+}
+
+@keyframes blink { 50% { border-color: $secondary-color; }  }
+
+
+.correct-selected-button {
+  color: #00e800 !important;
+  border-color: green !important;
+}
+
+.incorrect-selected-button {
+  color: red !important;
+  border-color: #8f0000 !important;
+}
+
+.disabled-button {
+  color: #ffffffb5 !important;
+  border-color: #1677ffbb !important;
+}
+
+.game-step-content {
+  text-align: center;
+  color: #d9a520;
+  background-color: #33445480;
+  border-radius: 8px;
+  border: 1px dashed #Daa520de;
+  margin-top: 16px;
+}
+
+.result-label {
+  margin-top: 32px;
+  margin-bottom: 48px;
+  font-size: 18px;
+  color: #4e98ff;
+  
+  .result-score {
+    font-weight: bold;
+    color: #d9a520;
+  }
+}
