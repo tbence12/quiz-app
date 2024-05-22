@@ -16,7 +16,7 @@ database();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const whiteList = ['http://localhost:3000', 'http://localhost:4000', 'http://localhost:4200']
+const whiteList = ['http://d25ugh5jfrch9l.cloudfront.net', 'http://18.199.84.212:4000', 'http://localhost:3000', 'http://localhost:4000', 'http://localhost:4200']
 
 app.use(cors({origin: function(origin, callback) {
   if(whiteList.includes(origin) || origin === undefined) {
